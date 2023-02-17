@@ -1,0 +1,15 @@
+C:\Users\willy\source\repos\TADLivro\TADLivro\bin\Debug\net6.0\TADLivro.exe
+C:\Users\willy\source\repos\TADLivro\TADLivro\bin\Debug\net6.0\TADLivro.deps.json
+C:\Users\willy\source\repos\TADLivro\TADLivro\bin\Debug\net6.0\TADLivro.runtimeconfig.json
+C:\Users\willy\source\repos\TADLivro\TADLivro\bin\Debug\net6.0\TADLivro.dll
+C:\Users\willy\source\repos\TADLivro\TADLivro\bin\Debug\net6.0\TADLivro.pdb
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.AssemblyInfo.cs
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.dll
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\refint\TADLivro.dll
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.pdb
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\TADLivro.genruntimeconfig.cache
+C:\Users\willy\source\repos\TADLivro\TADLivro\obj\Debug\net6.0\ref\TADLivro.dll
