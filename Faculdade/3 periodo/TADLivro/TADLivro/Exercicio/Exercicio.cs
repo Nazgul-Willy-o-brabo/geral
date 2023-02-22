@@ -61,18 +61,18 @@ namespace TADLivro.TADLivro.Exercicio
         }
         public static void Ocorrencias(Livro[] livro)
         {
-            //Ocorrencia de valores
+            //Ocorrencia de generos
 
             Console.Clear();
-            int modernismo = 0; int barroco = 0; int nenhum = 0;
+            string genero; int cont=0;
+            Console.WriteLine("Digite um genero para saber se ele existe e quantas vezes aparecem");
+            genero = Console.ReadLine();
             for (int x = 0; x < livro.Length; x++)
             {
-                if (livro[x].ano >= 1930 && livro[x].ano <= 1945) { modernismo++; }
-                else if (livro[x].ano >= 1601 && livro[x].ano <= 1768) { barroco++; }
-                else { nenhum++; }
+                if (genero == livro[x].Genero ) { cont++; }
             }
-            Console.WriteLine($"Livros da era Barroco: {barroco}\nLivros da era Modernista: {modernismo}\nLivro de nenhuma das eras: {nenhum}");
-        }
+            Console.WriteLine($"Existiram {cont} livro(s) do genero {genero} encontrados");
+        }        
         public static void OrdenarLivros(Livro[] livroAux)
         {
             Array.Sort(livroAux, (x, y) => x.ano.CompareTo(y.ano));
