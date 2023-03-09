@@ -7,7 +7,7 @@ using Veiculos.com.willy.veiculos.entities.Services;
 
 namespace Veiculos.com.willy.veiculos.entities
 {
-    internal class Carros : Veiculo
+    internal abstract class Carros : Veiculo, ISeguro
     {
         protected int Bancos { get; set; }
         protected int Portas { get; set; }
@@ -16,10 +16,13 @@ namespace Veiculos.com.willy.veiculos.entities
         {
             this.Rodas = 4;
         }
+        public virtual String SeguroCarro() {
+            return "Seu veiculo é assegurado!";
+        }
 
         public override string ToString()
         {
-            return $"{base.ToString()}\nStatus do seguro: {dd}\nQuantidade de bancos: {Bancos}\nQuantidade de portas: {Portas}";
+            return $"{base.ToString()}\nStatus do seguro: {SeguroCarro()} \nQuantidade de bancos: {Bancos}\nQuantidade de portas: {Portas}";
         }
     }
 }

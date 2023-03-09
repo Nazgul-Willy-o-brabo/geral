@@ -7,7 +7,7 @@ using Veiculos.com.willy.veiculos.entities.Enum;
 
 namespace Veiculos.com.willy.veiculos.entities
 {
-    internal class Motos : Veiculo
+    internal abstract class Motos : Veiculo
     {
         protected Guidon guidon;
         protected Pneus pneus;

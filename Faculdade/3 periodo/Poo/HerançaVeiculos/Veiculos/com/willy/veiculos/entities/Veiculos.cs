@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Veiculos.com.willy.veiculos.entities.carTypes;
+using Veiculos.com.willy.veiculos.entities.Services;
 
 namespace Veiculos.com.willy.veiculos.entities
 {
-    public class Veiculo
+    public abstract class Veiculo
     {
         protected string Placa { get; set; }
         protected int Rodas { get; set; }

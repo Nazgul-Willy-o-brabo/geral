@@ -7,14 +7,9 @@ using Veiculos.com.willy.veiculos.entities.Enum;
 
 namespace Veiculos.com.willy.veiculos.entities.Services
 {
-    internal class Seguro : Carros
+    internal interface ISeguro
     {
-        public bool seguro;
+          String SeguroCarro();
 
-        protected Seguro(string placa, string chassi, string renavam) : base(placa, chassi, renavam) {
-            if (placa != null) {
-                seguro = true;
-            }
-        }
     }
 }
