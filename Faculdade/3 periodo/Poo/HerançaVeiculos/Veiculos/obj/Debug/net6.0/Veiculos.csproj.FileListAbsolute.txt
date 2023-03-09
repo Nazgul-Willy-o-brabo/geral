@@ -1,0 +1,15 @@
+C:\Users\willy\source\repos\Veiculos\Veiculos\bin\Debug\net6.0\Veiculos.exe
+C:\Users\willy\source\repos\Veiculos\Veiculos\bin\Debug\net6.0\Veiculos.deps.json
+C:\Users\willy\source\repos\Veiculos\Veiculos\bin\Debug\net6.0\Veiculos.runtimeconfig.json
+C:\Users\willy\source\repos\Veiculos\Veiculos\bin\Debug\net6.0\Veiculos.dll
+C:\Users\willy\source\repos\Veiculos\Veiculos\bin\Debug\net6.0\Veiculos.pdb
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.AssemblyInfo.cs
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.dll
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\refint\Veiculos.dll
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.pdb
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\Veiculos.genruntimeconfig.cache
+C:\Users\willy\source\repos\Veiculos\Veiculos\obj\Debug\net6.0\ref\Veiculos.dll
