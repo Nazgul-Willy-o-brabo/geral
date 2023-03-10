@@ -1,0 +1,15 @@
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\bin\Debug\net6.0\ExercicioFixação01.exe
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\bin\Debug\net6.0\ExercicioFixação01.deps.json
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\bin\Debug\net6.0\ExercicioFixação01.runtimeconfig.json
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\bin\Debug\net6.0\ExercicioFixação01.dll
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\bin\Debug\net6.0\ExercicioFixação01.pdb
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.AssemblyInfo.cs
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.dll
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\refint\ExercicioFixação01.dll
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.pdb
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ExercicioFixação01.genruntimeconfig.cache
+C:\Users\willy\source\repos\ExercicioFixação01\ExercicioFixação01\obj\Debug\net6.0\ref\ExercicioFixação01.dll
