@@ -1,0 +1,15 @@
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\bin\Debug\net6.0\ExMetAbstratos.exe
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\bin\Debug\net6.0\ExMetAbstratos.deps.json
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\bin\Debug\net6.0\ExMetAbstratos.runtimeconfig.json
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\bin\Debug\net6.0\ExMetAbstratos.dll
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\bin\Debug\net6.0\ExMetAbstratos.pdb
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.AssemblyInfo.cs
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.dll
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\refint\ExMetAbstratos.dll
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.pdb
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ExMetAbstratos.genruntimeconfig.cache
+C:\Users\willy\source\repos\ExMetAbstratos\ExMetAbstratos\obj\Debug\net6.0\ref\ExMetAbstratos.dll
