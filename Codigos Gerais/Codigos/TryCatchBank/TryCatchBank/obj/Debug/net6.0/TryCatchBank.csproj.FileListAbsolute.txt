@@ -1,0 +1,15 @@
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\bin\Debug\net6.0\TryCatchBank.exe
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\bin\Debug\net6.0\TryCatchBank.deps.json
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\bin\Debug\net6.0\TryCatchBank.runtimeconfig.json
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\bin\Debug\net6.0\TryCatchBank.dll
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\bin\Debug\net6.0\TryCatchBank.pdb
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.AssemblyInfo.cs
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.dll
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\refint\TryCatchBank.dll
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.pdb
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\TryCatchBank.genruntimeconfig.cache
+C:\Users\willy\source\repos\TryCatchBank\TryCatchBank\obj\Debug\net6.0\ref\TryCatchBank.dll
