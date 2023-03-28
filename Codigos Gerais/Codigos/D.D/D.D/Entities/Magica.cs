@@ -10,7 +10,7 @@
 
         public override string ToString()
         {
-            return $"{base.ToString()}\nTipo: Magica\nEfeito: {efeito}";
+            return $"{base.ToString()}\nTipo: Mágica\nEfeito: {efeito}";
         }
     }
 
