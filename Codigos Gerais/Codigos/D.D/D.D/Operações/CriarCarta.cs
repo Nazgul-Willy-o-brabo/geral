@@ -1,4 +1,5 @@
 ﻿using D.D.Entities;
+using D.D.Entities.Enum;
 using D.D.Modelos;
 
 namespace D.D.Operações
@@ -50,20 +51,29 @@ namespace D.D.Operações
             }
         }
 
-        public static void CCampo(string path, ref int LastId)
-        {
-            using (StreamWriter sw = File.AppendText(path))
-            {
-                Console.WriteLine("--Modelo Campo--");
-                string nome = "nomeee ";
-                string desc = "desc";
-                string efeito = "eff";
-                Carta carta = new Campo(LastId + 1, nome, desc, efeito);
-                Console.WriteLine(carta.ToString());
-                sw.WriteLine(carta);
-                Console.WriteLine("Carta Mística criada com Sucesso!");
-            }
-        }
+        //public static void CCampo(string path, ref int LastId)
+        //{
+        //    using (StreamWriter sw = File.AppendText(path))
+        //    {
+        //        Console.Clear();
+        //        int val=-1;
+        //        Operacao.ListaAtrib();
+        //        Console.WriteLine("Selecione os atributos Beneficos");
+        //        while (val != 0) {
+        //            Console.Write("Selecione o atributo: ");
+        //            val = int.Parse(Console.ReadLine());
+        //        }
+        //        List<Atributos> listAtrib = new List<Atributos>();
+        //        Console.WriteLine("--Modelo Campo--");
+        //        string nome = "nomeee ";
+        //        string desc = "desc";
+        //        string efeito = "eff";
+        //        Carta carta = new Campo(LastId + 1, nome, desc, efeito);
+        //        Console.WriteLine(carta.ToString());
+        //        sw.WriteLine(carta);
+        //        Console.WriteLine("Carta Mística criada com Sucesso!");
+        //    }
+        //}
 
     }
 }

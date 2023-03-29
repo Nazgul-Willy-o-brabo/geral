@@ -1,4 +1,6 @@
-﻿namespace D.D.Operações
+﻿using D.D.Entities.Enum;
+
+namespace D.D.Operações
 {
     public class Operacao
     {
@@ -129,5 +131,18 @@
             }
         }
 
+        public static void ListaAtrib()
+        {
+            Console.Clear();
+            List<Atributos> atrib = new List<Atributos>();
+            foreach(Atributos at in Enum.GetValues(typeof(Atributos)))
+            {
+                var x = ((int)at).ToString("D2");
+                Console.Write($"{x} : {at.ToString().PadRight(20)}");
+                if ((int)at % 4 == 0)
+                    Console.WriteLine();
+            }
+            Console.WriteLine("\n\n");
+        }
     }
 }

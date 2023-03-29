@@ -42,7 +42,7 @@
         Mestre_Sabio = 38,
         Metamorfo = 39,
         Monstro = 40,
-        Nucle_de_Energia = 41,
+        Nucleo_de_Energia = 41,
         Parasita = 42,
         Pesadelo = 43,
         Raio = 44,
