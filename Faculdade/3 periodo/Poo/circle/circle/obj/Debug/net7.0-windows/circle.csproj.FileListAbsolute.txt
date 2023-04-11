@@ -1,0 +1,17 @@
+C:\Users\willy\source\repos\circle\circle\bin\Debug\net7.0-windows\circle.exe
+C:\Users\willy\source\repos\circle\circle\bin\Debug\net7.0-windows\circle.deps.json
+C:\Users\willy\source\repos\circle\circle\bin\Debug\net7.0-windows\circle.runtimeconfig.json
+C:\Users\willy\source\repos\circle\circle\bin\Debug\net7.0-windows\circle.dll
+C:\Users\willy\source\repos\circle\circle\bin\Debug\net7.0-windows\circle.pdb
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.Form1.resources
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.csproj.GenerateResource.cache
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.AssemblyInfo.cs
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.dll
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\refint\circle.dll
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.pdb
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\circle.genruntimeconfig.cache
+C:\Users\willy\source\repos\circle\circle\obj\Debug\net7.0-windows\ref\circle.dll
