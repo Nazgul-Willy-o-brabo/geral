@@ -8,21 +8,17 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\willy\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\willy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willy\\Source\\Repos\\Willy-Campos-Costa\\Geral\\Codigos Gerais\\Codigos\\D.D\\D.D\\D.D.csproj",
+      "projectUniqueName": "C:\\Users\\willy\\source\\repos\\D.D\\D.D\\D.D.csproj",
       "projectName": "D.D",
-      "projectPath": "C:\\Users\\willy\\Source\\Repos\\Willy-Campos-Costa\\Geral\\Codigos Gerais\\Codigos\\D.D\\D.D\\D.D.csproj",
+      "projectPath": "C:\\Users\\willy\\source\\repos\\D.D\\D.D\\D.D.csproj",
       "packagesPath": "C:\\Users\\willy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willy\\Source\\Repos\\Willy-Campos-Costa\\Geral\\Codigos Gerais\\Codigos\\D.D\\D.D\\obj\\",
+      "outputPath": "C:\\Users\\willy\\source\\repos\\D.D\\D.D\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\willy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -65,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
