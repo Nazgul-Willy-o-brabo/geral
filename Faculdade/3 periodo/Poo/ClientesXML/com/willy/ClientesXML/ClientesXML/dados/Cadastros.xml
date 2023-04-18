@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCliente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cliente>
+    <Nome>Pedro Afonso</Nome>
+    <Email>pedroAfonso@gmail.com</Email>
+  </Cliente>
+  <Cliente>
+    <Nome>Guilherme José Silva</Nome>
+    <Email>Gui3532@gmail.com</Email>
+  </Cliente>
+  <Cliente>
+    <Nome>Lucas Almeida</Nome>
+    <Email>LuhAlm2002@hotmail.com</Email>
+  </Cliente>
+  <Cliente>
+    <Nome>Humber Nigra God</Nome>
+    <Email>elHumberton@facebook.com</Email>
+  </Cliente>
+</ArrayOfCliente>

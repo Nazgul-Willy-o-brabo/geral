@@ -1,0 +1,17 @@
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\bin\Debug\net6.0-windows\ClientesXML.exe
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\bin\Debug\net6.0-windows\ClientesXML.deps.json
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\bin\Debug\net6.0-windows\ClientesXML.runtimeconfig.json
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\bin\Debug\net6.0-windows\ClientesXML.dll
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\bin\Debug\net6.0-windows\ClientesXML.pdb
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.Form1.resources
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.csproj.GenerateResource.cache
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.AssemblyInfo.cs
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.dll
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\refint\ClientesXML.dll
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.pdb
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ClientesXML.genruntimeconfig.cache
+C:\Users\willy\source\repos\ClientesXML\ClientesXML\obj\Debug\net6.0-windows\ref\ClientesXML.dll
