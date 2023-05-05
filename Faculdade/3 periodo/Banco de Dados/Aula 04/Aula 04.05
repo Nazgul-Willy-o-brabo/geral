@@ -1,0 +1,57 @@
+CREATE Table Empregado(
+MatEmp smallint not null,
+NomEmp varchar(80) not null,
+constraint PK_MatEmp primary key(MatEmp));
+
+
+Create table dependentes(
+CodDep smallint not null,
+NomDep varchar(80) not null,
+MatEmp smallint not null,
+constraint PK_CodDep primary key(CodDep),
+constraint FK_MatEmp foreign key(MatEmp) references Empregado on delete cascade);
+
+
+
+INSERT INTO Empregado VALUES
+(1,'José da silva'),(2,'Roberto Duarte'),(3,'Rosa Maria');
+
+Begin tran
+INSERT INTO dependentes VALUES
+(1,'Janaina da silva',1);
+--commit
+--rollback
+
+
+INSERT INTO dependentes VALUES
+(2,'Ana Maria Duarte',2),(3,'Ana Maria silva',3);
+
+
+
+SELECT * FROM Empregado
+
+SELECT * FROM dependentes
+
+
+DELETE FROM Empregado
+WHERE MatEmp = 1;
+
+
+
+ALTER TABLE dependenteS
+DROP CONSTRAINT FK_MatEmp;
+
+ALTER TABLE dependenteS
+ADD CONSTRAINT FK_MatEmp FOREIGN KEY(MATEMP)
+REFERENCES EMPREGADO ON UPDATE CASCADE;
+
+BEGIN TRAN
+UPDATE Empregado
+SET MATEMP = 4
+WHERE MATEMP = 1
+
+--3) alterar a integridade referencial para DELET set NULL
+ALTER TABLE DEPENDENTES DROP CONSTRAINT FK_MatEmp
+
+
+--4) alterar a integridade referencial para DELET set NULL
