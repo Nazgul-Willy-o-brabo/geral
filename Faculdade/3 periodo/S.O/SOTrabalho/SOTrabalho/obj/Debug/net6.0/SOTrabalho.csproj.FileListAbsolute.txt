@@ -1,0 +1,15 @@
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\bin\Debug\net6.0\SOTrabalho.exe
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\bin\Debug\net6.0\SOTrabalho.deps.json
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\bin\Debug\net6.0\SOTrabalho.runtimeconfig.json
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\bin\Debug\net6.0\SOTrabalho.dll
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\bin\Debug\net6.0\SOTrabalho.pdb
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.AssemblyInfo.cs
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.dll
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\refint\SOTrabalho.dll
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.pdb
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\SOTrabalho.genruntimeconfig.cache
+C:\Users\willy\source\repos\SOTrabalho\SOTrabalho\obj\Debug\net6.0\ref\SOTrabalho.dll
