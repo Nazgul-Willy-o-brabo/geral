@@ -102,5 +102,36 @@ namespace RpgGame.view
                 Console.WriteLine($"{i + 1} -- {list[i].Nome}");
             }
         }
+        public static void GerarMonstro()
+        {
+
+        }
+        public static string GeradorDeNome()
+        {
+            Random ran = new Random();
+            List<string> Prefix = new List<string> { "Necro ", "Sombrio ", "Tenebro ", "Cadavero ", "Profano ", "Sinistro ", "Maldito ", "Amaldiçoado " };
+            List<string> tipo = new List<string>() { "desalmado ", "desossado ", "andarilho ", "renegado ", "arrepiante ", "sanguinário ", "medonho ", "macabro " };
+            List<string> Sufix = new List<string>() { "das trevas", "do abismo", "destruído", "do Além", "da morte eterna", "da escuridão", "das sombras", "das almas perdidas" };
+            string Pref = Prefix[ran.Next(Prefix.Count)];
+            string Tip = tipo[ran.Next(tipo.Count)];
+            string Suf = Sufix[ran.Next(Sufix.Count)];
+            Console.WriteLine(Pref + Tip + Suf);
+            return Pref+Tip+Suf;
+        }
+        public static int GerarTier()
+        {
+            int num;
+            Random r = new Random();
+            num = r.Next(0, 100);
+            if(num <= 20)
+            {
+                return 1;
+            }
+            else if(num > 20 && num <= 85)
+            {
+                return 2;
+            }
+            else { return 3; }
+        }
     }
 }

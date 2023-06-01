@@ -24,6 +24,8 @@ namespace RpgGame.models
             MaxHp+= 3;
             Atk += 3;
         }
+
+        //Remover \/
         public override string ToString()
         {
             string inventStr = string.Join(", ", inventario.Select(item => item.nome));
