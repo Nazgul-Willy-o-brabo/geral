@@ -115,7 +115,6 @@ namespace RpgGame.view
             string Pref = Prefix[ran.Next(Prefix.Count)];
             string Tip = tipo[ran.Next(tipo.Count)];
             string Suf = Sufix[ran.Next(Sufix.Count)];
-            Console.WriteLine(Pref + Tip + Suf);
             return Pref+Tip+Suf;
         }
         public static int GerarTier()
@@ -133,5 +132,60 @@ namespace RpgGame.view
             }
             else { return 3; }
         }
-    }
+        public static int GerarNivel(int tier, Personagem p) {
+            Random r = new Random();
+            int level;
+            int minLevel = p.Nivel - (tier+1);
+            int maxLevel = p.Nivel + (2*tier);
+
+            level = r.Next(minLevel, maxLevel);
+            if(level <= 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return level;
+            }
+
+        }
+        public static int GerarHp(int tier,int nivel, Personagem p) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
+        {
+            Random r = new Random();
+            double maxHp;
+            int Base = r.Next(20, 40);
+            int VidaPNivel = r.Next(1, 3);
+            if (tier == 1)
+            {
+                maxHp = (Base + (nivel * VidaPNivel)*(r.NextDouble() * 0.2 + 0.7));//De 0.7 a 0.9 
+            }
+            else if (tier == 2)
+            {
+                maxHp = (Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.4 + 0.8)); //de 0.8 a 1.2
+            }
+            else
+            {
+                maxHp = (Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.4 + 1.2)); //de 1.2 a 1.6
+            }
+            int x = (int)maxHp;
+            return x;
+        }
+        public static void GerarStats(int tier, Personagem p, List<Habilidade> hab)
+        {
+            Random r = new Random();
+            double Atk;
+            if (tier == 1)
+            {
+                Atk = p.Atk * (r.NextDouble() * 0.3 + 0.7); //De 0.6 a 0.9
+            }
+            else if (tier == 2)
+            {
+                Atk = p.Atk * (r.NextDouble() * 0.4 + 0.8); //de 0.8 a 1.2
+            }
+            else
+            {
+                Atk = p.Atk * (r.NextDouble() * 0.4 + 1.2); //de 1.2 a 1.6
+            }
+        }
+    } 
 }

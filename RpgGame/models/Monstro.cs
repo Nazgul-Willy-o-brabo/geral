@@ -13,6 +13,7 @@ namespace RpgGame.models
         public int MaxHp { get; protected set; }
         public int Atk { get; protected set; }
         public int Nivel { get; protected set; }
+        public int Xp { get; protected set; }
         public int Tier { get; protected set; }
         public List<Habilidade>? Hab { get; protected set; }
         public List<Item>? Items { get; protected set; }
