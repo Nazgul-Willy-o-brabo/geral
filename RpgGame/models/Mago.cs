@@ -1,9 +1,10 @@
 ﻿using RpgGame.habilidades;
+using RpgGame.Interface;
 using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Mago : Personagem
+    public sealed class Mago : Personagem, ILevelUp
     {
         public Mago(string nome)
         {
@@ -16,12 +17,13 @@ namespace RpgGame.models
             inventario = new List<Item> { new CajadoMadeira(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new AtaqueMagico() };
         }
-        public override void LevelUp()
+
+        public void LevelUp()
         {
             Nivel++;
             //RecoverHp();
             Hp += 3;
-            MaxHp+= 3;
+            MaxHp += 3;
             Atk += 3;
         }
 

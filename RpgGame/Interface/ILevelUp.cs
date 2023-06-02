@@ -1,5 +1,4 @@
-﻿using RpgGame.models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RpgGame.Interface
 {
-    internal interface IConsumivel
+    internal interface ILevelUp
     {
-        public abstract void Efeito (Personagem p);
+        public abstract void LevelUp();
     }
 }

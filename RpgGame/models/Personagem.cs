@@ -1,8 +1,9 @@
 ﻿using RpgGame.view;
+using RpgGame.Interface;
 
 namespace RpgGame.models
 {
-    public abstract class Personagem
+    public abstract class Personagem : IPlayer
     {
         public string Nome { get; protected set; }
         public int Hp { get; set; }
@@ -49,6 +50,5 @@ namespace RpgGame.models
                 Operacoes.SubstituirHabilidade(habilidades, hab);
             }
         }
-        public abstract void LevelUp();
     }
 }

@@ -1,10 +1,11 @@
 ﻿using RpgGame.habilidades;
+using RpgGame.Interface;
 using RpgGame.itens;
 using System;
 
 namespace RpgGame.models
 {
-    public sealed class Guerreiro : Personagem
+    public sealed class Guerreiro : Personagem, ILevelUp, IPlayer
     {
         public Guerreiro(string nome)
         {
@@ -17,7 +18,7 @@ namespace RpgGame.models
             inventario = new List<Item> { new EspadaMadeira(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido() };
         }
-        public override void LevelUp()
+        public void LevelUp()
         {
             Nivel++;
           //RecoverHp();
