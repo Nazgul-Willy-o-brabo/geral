@@ -1,11 +1,4 @@
-﻿using RpgGame.Interface;
-using RpgGame.models;
-using RpgGame.view;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgGame.models;
 
 namespace RpgGame.itens
 {

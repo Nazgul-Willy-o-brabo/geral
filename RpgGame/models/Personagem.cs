@@ -1,7 +1,4 @@
-﻿using RpgGame.view;
-using RpgGame.Interface;
-
-namespace RpgGame.models
+﻿namespace RpgGame.models
 {
     public abstract class Personagem
     {

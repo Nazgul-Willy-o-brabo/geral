@@ -1,5 +1,4 @@
-﻿using RpgGame.Interface;
-using RpgGame.view;
+﻿using RpgGame.view;
 
 namespace RpgGame.models
 {
@@ -8,7 +7,6 @@ namespace RpgGame.models
         public int Tier { get; protected set; }
         public List<Habilidade> habilidades { get; protected set; }
         public Atributos atributos { get; protected set; } = new Atributos();
-
 
         public CriaturaDaNoite(PersonagemJogador p) { 
             Nome = Operacoes.GeradorDeNome();

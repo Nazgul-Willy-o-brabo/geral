@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willy\\source\\repos\\RpgGame\\RpgGame\\RpgGame.csproj": {}
+    "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willy\\source\\repos\\RpgGame\\RpgGame\\RpgGame.csproj": {
+    "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willy\\source\\repos\\RpgGame\\RpgGame\\RpgGame.csproj",
+        "projectUniqueName": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj",
         "projectName": "RpgGame",
-        "projectPath": "C:\\Users\\willy\\source\\repos\\RpgGame\\RpgGame\\RpgGame.csproj",
+        "projectPath": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj",
         "packagesPath": "C:\\Users\\willy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willy\\source\\repos\\RpgGame\\RpgGame\\obj\\",
+        "outputPath": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\willy\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,9 +1,4 @@
 ﻿using RpgGame.view;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RpgGame.models
 {
@@ -49,5 +44,7 @@ namespace RpgGame.models
                 Operacoes.SubstituirHabilidade(habilidades, hab);
             }
         }
+        public abstract void LevelUp();
+
     }
 }

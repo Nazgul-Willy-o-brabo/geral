@@ -1,10 +1,9 @@
 ﻿using RpgGame.habilidades;
-using RpgGame.Interface;
 using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Ninja : PersonagemJogador, ILevelUp
+    public sealed class Ninja : PersonagemJogador
     {
         public Ninja(string nome)
         {
@@ -17,7 +16,7 @@ namespace RpgGame.models
             inventario = new List<Item> { new AdagasDePedra(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new ChuvaDeShuriken() };
         }
-        public void LevelUp()
+        public override void LevelUp()
         {
             atributo.Nivel++;
             //RecoverHp();

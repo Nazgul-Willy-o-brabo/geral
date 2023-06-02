@@ -43,3 +43,11 @@ C:\Users\willy\Desktop\Rpg\Geral\RpgGame\obj\Debug\net6.0\refint\RpgGame.dll
 C:\Users\willy\Desktop\Rpg\Geral\RpgGame\obj\Debug\net6.0\RpgGame.pdb
 C:\Users\willy\Desktop\Rpg\Geral\RpgGame\obj\Debug\net6.0\RpgGame.genruntimeconfig.cache
 C:\Users\willy\Desktop\Rpg\Geral\RpgGame\obj\Debug\net6.0\ref\RpgGame.dll
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.csproj.AssemblyReference.cache
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.AssemblyInfoInputs.cache
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.AssemblyInfo.cs
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.csproj.CoreCompileInputs.cache
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.dll
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\refint\RpgGame.dll
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.pdb
