@@ -1,5 +1,6 @@
 ﻿using RpgGame.Interface;
 using RpgGame.models;
+using RpgGame.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,12 @@ namespace RpgGame.itens
             nome = "Poção de cura";
         }
 
-        public override void Usar(Personagem p)
+        public override void Usar(PersonagemJogador p)
         {
-            p.Hp += 25;
-            if (p.Hp > p.MaxHp)
+            p.atributo.Hp += 25;
+            if (p.atributo.Hp > p.atributo.MaxHp)
             {
-                p.Hp = p.MaxHp;
+                p.atributo.Hp = p.atributo.MaxHp;
             }
         }
     }

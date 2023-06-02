@@ -4,7 +4,7 @@ namespace RpgGame.view
 {
     public static class Operacoes
     {
-        public static void CriarPersonagem(ref Personagem personagem)
+        public static void CriarPersonagem(ref PersonagemJogador personagem)
         {
             Console.Write("Digite o nome do personagem: ");
             string nome = Console.ReadLine();
@@ -132,11 +132,11 @@ namespace RpgGame.view
             }
             else { return 3; }
         }
-        public static int GerarNivel(int tier, Personagem p) {
+        public static int GerarNivel(int tier, PersonagemJogador p) {
             Random r = new Random();
             int level;
-            int minLevel = p.Nivel - (tier+1);
-            int maxLevel = p.Nivel + (2*tier);
+            int minLevel = p.atributo.Nivel - (tier+1);
+            int maxLevel = p.atributo.Nivel + (2*tier);
 
             level = r.Next(minLevel, maxLevel);
             if(level <= 1)
@@ -149,7 +149,7 @@ namespace RpgGame.view
             }
 
         }
-        public static int GerarHp(int tier,int nivel, Personagem p) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
+        public static int GerarHp(int tier,int nivel, PersonagemJogador p) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
         {
             Random r = new Random();
             double maxHp;
@@ -170,21 +170,21 @@ namespace RpgGame.view
             int x = (int)maxHp;
             return x;
         }
-        public static void GerarStats(int tier, Personagem p, List<Habilidade> hab)
+        public static void GerarStats(int tier, PersonagemJogador p, List<Habilidade> hab)
         {
             Random r = new Random();
             double Atk;
             if (tier == 1)
             {
-                Atk = p.Atk * (r.NextDouble() * 0.3 + 0.7); //De 0.6 a 0.9
+                Atk = p.atributo.Atk * (r.NextDouble() * 0.3 + 0.7); //De 0.6 a 0.9
             }
             else if (tier == 2)
             {
-                Atk = p.Atk * (r.NextDouble() * 0.4 + 0.8); //de 0.8 a 1.2
+                Atk = p.atributo.Atk * (r.NextDouble() * 0.4 + 0.8); //de 0.8 a 1.2
             }
             else
             {
-                Atk = p.Atk * (r.NextDouble() * 0.4 + 1.2); //de 1.2 a 1.6
+                Atk = p.atributo.Atk * (r.NextDouble() * 0.4 + 1.2); //de 1.2 a 1.6
             }
         }
     } 

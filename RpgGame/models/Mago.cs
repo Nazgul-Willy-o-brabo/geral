@@ -1,30 +1,31 @@
 ﻿using RpgGame.habilidades;
 using RpgGame.Interface;
 using RpgGame.itens;
+using RpgGame.view;
 
 namespace RpgGame.models
 {
-    public sealed class Mago : Personagem, ILevelUp
+    public sealed class Mago : PersonagemJogador, ILevelUp
     {
         public Mago(string nome)
         {
             Nome = nome;
-            Hp = 30;
-            MaxHp = 30;
-            Atk = 7;
-            Xp = 0;
-            Nivel = 1;
+            atributo.Hp = 30;
+            atributo.MaxHp = 30;
+            atributo.Atk = 7;
+            atributo.Xp = 0;
+            atributo.Nivel = 1;
             inventario = new List<Item> { new CajadoMadeira(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new AtaqueMagico() };
         }
 
         public void LevelUp()
         {
-            Nivel++;
+            atributo.Nivel++;
             //RecoverHp();
-            Hp += 3;
-            MaxHp += 3;
-            Atk += 3;
+            atributo.Hp += 3;
+            atributo.MaxHp += 3;
+            atributo.Atk += 3;
         }
 
         //Remover \/
@@ -33,7 +34,7 @@ namespace RpgGame.models
             string inventStr = string.Join(", ", inventario.Select(item => item.nome));
             string HabStr = string.Join(", ", habilidades.Select(Hab => Hab.Nome));
 
-            return $"Guerreiro de nome {Nome}\nHP atual: {Hp}\nATK Atual {Atk}\nXp: {Xp}\nNivel: {Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
+            return $"Guerreiro de nome {Nome}\nHP atual: {atributo.Hp}\nATK Atual {atributo.Atk}\nXp: {atributo.Xp}\nNivel: {atributo.Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
         }
     }
 }

@@ -5,26 +5,26 @@ using System;
 
 namespace RpgGame.models
 {
-    public sealed class Guerreiro : Personagem, ILevelUp, IPlayer
+    public sealed class Guerreiro : PersonagemJogador, ILevelUp
     {
         public Guerreiro(string nome)
         {
             Nome = nome;
-            Hp = 36;
-            MaxHp = 36;
-            Atk = 6;
-            Xp = 0;
-            Nivel = 20;
+            atributo.Hp = 36;
+            atributo.MaxHp = 36;
+            atributo.Atk = 6;
+            atributo.Xp = 0;
+            atributo.Nivel = 20;
             inventario = new List<Item> { new EspadaMadeira(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido() };
         }
         public void LevelUp()
         {
-            Nivel++;
+            atributo.Nivel++;
           //RecoverHp();
-            Hp += 4;
-            MaxHp+= 4;
-            Atk += 2;
+            atributo.Hp += 4;
+            atributo.MaxHp += 4;
+            atributo.Atk += 2;
         }
 
         //Remover \/
@@ -33,7 +33,7 @@ namespace RpgGame.models
             string inventStr = string.Join(", ", inventario.Select(item => item.nome));
             string HabStr = string.Join(", ", habilidades.Select(Hab => Hab.Nome));
 
-            return $"Guerreiro de nome {Nome}\nHP atual: {Hp}\nATK Atual {Atk}\nXp: {Xp}\nNivel: {Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
+            return $"Guerreiro de nome {Nome}\nHP atual: {atributo.Hp}\nATK Atual {atributo.Atk}\nXp: {atributo.Xp}\nNivel: {atributo.Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
         }
     }
 }

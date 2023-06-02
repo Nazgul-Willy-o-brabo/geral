@@ -4,26 +4,26 @@ using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Ninja : Personagem, ILevelUp
+    public sealed class Ninja : PersonagemJogador, ILevelUp
     {
         public Ninja(string nome)
         {
             Nome = nome;
-            Hp = 26;
-            MaxHp = 26;
-            Atk = 8;
-            Xp = 0;
-            Nivel = 1;
+            atributo.Hp = 26;
+            atributo.MaxHp = 26;
+            atributo.Atk = 8;
+            atributo.Xp = 0;
+            atributo.Nivel = 1;
             inventario = new List<Item> { new AdagasDePedra(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new ChuvaDeShuriken() };
         }
         public void LevelUp()
         {
-            Nivel++;
+            atributo.Nivel++;
             //RecoverHp();
-            Hp += 2;
-            MaxHp += 2;
-            Atk += 4;
+            atributo.Hp += 2;
+            atributo.MaxHp += 2;
+            atributo.Atk += 4;
         }
         
         //Remover \/
@@ -32,7 +32,7 @@ namespace RpgGame.models
             string inventStr = string.Join(", ", inventario.Select(item => item.nome));
             string HabStr = string.Join(", ", habilidades.Select(Hab => Hab.Nome));
 
-            return $"Guerreiro de nome {Nome}\nHP atual: {Hp}\nATK Atual {Atk}\nXp: {Xp}\nNivel: {Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
+            return $"Guerreiro de nome {Nome}\nHP atual: {atributo.Hp} \nATK Atual  {atributo.Atk} \nXp:  {atributo.Xp} \nNivel:  {atributo.Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
         }
     }
 }
