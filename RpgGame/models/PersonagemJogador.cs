@@ -1,8 +1,9 @@
-﻿using RpgGame.view;
+﻿using RpgGame.Interface;
+using RpgGame.view;
 
 namespace RpgGame.models
 {
-    public abstract class PersonagemJogador : Personagem
+    public abstract class PersonagemJogador : Personagem, IStatus
     {
         public List<Item>? inventario { get; protected set; }
         public List<Habilidade>? habilidades { get; protected set; }

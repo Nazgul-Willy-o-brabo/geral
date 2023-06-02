@@ -1,23 +1,27 @@
-﻿using RpgGame.view;
+﻿using RpgGame.Interface;
+using RpgGame.view;
 
 namespace RpgGame.models
 {
-    internal class CriaturaDaNoite : Personagem
+    internal class CriaturaDaNoite : Personagem, IStatus
     {
-        public int Tier { get; protected set; }
+        public int tier { get; protected set; }
         public List<Habilidade> habilidades { get; protected set; }
-        public Atributos atributos { get; protected set; } = new Atributos();
+        public Atributos atributo { get; protected set; } = new Atributos();
 
-        public CriaturaDaNoite(PersonagemJogador p) { 
+        public CriaturaDaNoite(IStatus status) { 
             Nome = Operacoes.GeradorDeNome();
-            Tier = Operacoes.GerarTier();
-            atributos.Nivel = Operacoes.GerarNivel(Tier,p);
-            atributos.MaxHp = Operacoes.GerarHp(Tier, atributos.Nivel, p);
-            atributos.Hp = atributos.MaxHp;
+            tier = Operacoes.GerarTier();
+            atributo = new Atributos()
+            {
+                Nivel = Operacoes.GerarNivel(tier, status),
+                MaxHp = Operacoes.GerarHp(tier, atributo.Nivel, status),
+                Hp = atributo.MaxHp
+            };
         }
         public override string ToString()
         {
-            return $"Nome: {Nome}\nTier: {Tier}\nHp: {atributos.Hp}\nMaxHP {atributos.MaxHp}\nNivel {atributos.Nivel}";
+            return $"Nome: {Nome}\nTier: {tier}\nHp: {atributo.Hp}\nMaxHP {atributo.MaxHp}\nNivel {atributo.Nivel}";
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using RpgGame.models;
+﻿using RpgGame.Interface;
+using RpgGame.models;
 
 namespace RpgGame.view
 {
@@ -132,7 +133,7 @@ namespace RpgGame.view
             }
             else { return 3; }
         }
-        public static int GerarNivel(int tier, PersonagemJogador p) {
+        public static int GerarNivel(int tier, IStatus p) {
             Random r = new Random();
             int level;
             int minLevel = p.atributo.Nivel - (tier+1);
@@ -149,7 +150,7 @@ namespace RpgGame.view
             }
 
         }
-        public static int GerarHp(int tier,int nivel, PersonagemJogador p) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
+        public static int GerarHp(int tier,int nivel, IStatus p) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
         {
             Random r = new Random();
             double maxHp;
