@@ -8,6 +8,7 @@ namespace RpgGame.habilidades
         {
             Nome = "Ataque magico";
             Multiplicador = 1.2;
+            Tier = 1;
         }
     }
 }

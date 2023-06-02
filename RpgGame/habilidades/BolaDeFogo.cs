@@ -8,6 +8,7 @@ namespace RpgGame.habilidades
         {
             Nome = "Bola de fogo";
             Multiplicador = 1.4;
+            Tier = 1;
         }
     }
 }

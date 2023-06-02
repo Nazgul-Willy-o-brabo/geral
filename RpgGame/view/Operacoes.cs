@@ -78,14 +78,14 @@ namespace RpgGame.view
                 Console.ForegroundColor = ConsoleColor.White;
                 list[1] = hab;
             }
-            else if(op == 3)
+            else if (op == 3)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Substituido {list[2].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[2] = hab;
             }
-            else if(op == 4)
+            else if (op == 4)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Substituido {list[3].Nome} por {hab}");
@@ -107,8 +107,9 @@ namespace RpgGame.view
         {
 
         }
-        public static string GeradorDeNome()
+        public static string GeradorDeNome(int tier)
         {
+            string name;
             Random ran = new Random();
             List<string> Prefix = new List<string> { "Necro ", "Sombrio ", "Tenebro ", "Cadavero ", "Profano ", "Sinistro ", "Maldito ", "Amaldiçoado " };
             List<string> tipo = new List<string>() { "desalmado ", "desossado ", "andarilho ", "renegado ", "arrepiante ", "sanguinário ", "medonho ", "macabro " };
@@ -116,31 +117,47 @@ namespace RpgGame.view
             string Pref = Prefix[ran.Next(Prefix.Count)];
             string Tip = tipo[ran.Next(tipo.Count)];
             string Suf = Sufix[ran.Next(Sufix.Count)];
-            return Pref+Tip+Suf;
+            if (tier == 4)
+            {
+                name = "ALFA " + Pref + Tip + Suf;
+            }
+            else
+            {
+                name = Pref + Tip + Suf;
+            }
+            return name;
         }
         public static int GerarTier()
         {
             int num;
             Random r = new Random();
-            num = r.Next(0, 100);
-            if(num <= 20)
+            num = r.Next(0, 105);
+            if (num <= 20)
             {
                 return 1;
             }
-            else if(num > 20 && num <= 85)
+            else if (num > 20 && num <= 85)
             {
                 return 2;
             }
-            else { return 3; }
+            else if (num > 85 && num <= 100)
+            {
+                return 3;
+            }
+            else
+            {
+                return 4;
+            }
         }
-        public static int GerarNivel(int tier, IStatus p) {
+        public static int GerarNivel(int tier, IStatus p)
+        {
             Random r = new Random();
             int level;
-            int minLevel = p.atributo.Nivel - (tier+1);
-            int maxLevel = p.atributo.Nivel + (2*tier);
+            int minLevel = p.atributo.Nivel - (tier + 1);
+            int maxLevel = p.atributo.Nivel + (2 * tier);
 
             level = r.Next(minLevel, maxLevel);
-            if(level <= 1)
+            if (level <= 1)
             {
                 return 1;
             }
@@ -148,45 +165,86 @@ namespace RpgGame.view
             {
                 return level;
             }
-
         }
-        public static int GerarHp(int tier,int nivel, IStatus p) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
+        public static int GerarHp(int tier, int nivel) //Com 2 jogadores, adicionar um If com 1.2 de multiplicador na base final
         {
             Random r = new Random();
             double maxHp;
-            int Base = r.Next(20, 40);
+            int Base;
             int VidaPNivel = r.Next(1, 3);
             if (tier == 1)
             {
-                maxHp = (Base + (nivel * VidaPNivel)*(r.NextDouble() * 0.2 + 0.7));//De 0.7 a 0.9 
+                Base = r.Next(20, 30);
+                maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.2 + 0.7)) * 1.1);//De 0.7 a 0.9 
             }
             else if (tier == 2)
             {
-                maxHp = (Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.4 + 0.8)); //de 0.8 a 1.2
+                Base = r.Next(25, 35);
+                maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.4 + 0.8)) * 1.1); //de 0.8 a 1.2
+            }
+            else if (tier == 3)
+            {
+                Base = r.Next(30, 40);
+                maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.4 + 1.2)) * 1.15); //de 1.2 a 1.6
             }
             else
             {
-                maxHp = (Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.4 + 1.2)); //de 1.2 a 1.6
+                Base = r.Next(60, 80);
+                VidaPNivel = r.Next(2, 3);
+                if (nivel > 30)
+                {
+
+                    maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.2 + 2.0)) * 1.2); //de 2.0 a 2.2
+                }
+                else
+                {
+                    maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.2 + 2.0)) * 1); //de 2.0 a 2.2
+                }
             }
             int x = (int)maxHp;
             return x;
         }
-        public static void GerarStats(int tier, PersonagemJogador p, List<Habilidade> hab)
+        public static int GerarAtk(int tier, int nivel)
         {
             Random r = new Random();
             double Atk;
+            int Base;
+            double AtkPNivel = r.NextDouble() + 1;
             if (tier == 1)
             {
-                Atk = p.atributo.Atk * (r.NextDouble() * 0.3 + 0.7); //De 0.6 a 0.9
+                Base = r.Next(3, 6);
+                Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * (0.7)) * 0.75);//De 0.7 
             }
             else if (tier == 2)
             {
-                Atk = p.atributo.Atk * (r.NextDouble() * 0.4 + 0.8); //de 0.8 a 1.2
+                Base = r.Next(4, 8);
+                Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * (0.75)) * 0.8); //de 0,75
+            }
+            else if (tier == 3)
+            {
+                Base = r.Next(6, 10);
+                Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * (0.8)) * 0.85);//De 10.8
             }
             else
             {
-                Atk = p.atributo.Atk * (r.NextDouble() * 0.4 + 1.2); //de 1.2 a 1.6
+                Base = r.Next(11, 18);
+                AtkPNivel = r.Next(2, 3);
+                if (nivel > 30)
+                {
+
+                    Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * ((r.NextDouble() * 0.3 + 0.9))) * 0.9);//De 0,9 a 1.2 ;
+                }
+                else
+                {
+                    Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * ((r.NextDouble() * 0.3 + 0.9))) * 0.7);//De 0,9 a 1.2 ;
+                }
             }
+            int x = (int)Atk;
+            return x;
         }
-    } 
+        public static int RealizarFunc(int x, int y, Func<int, int, int> Func) //Uso de delegate
+        {
+            return Func(x, y);
+        }
+    }
 }

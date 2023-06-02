@@ -51,3 +51,10 @@ C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\Rpg
 C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.dll
 C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\refint\RpgGame.dll
 C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.pdb
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\bin\Debug\net6.0\RpgGame.exe
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\bin\Debug\net6.0\RpgGame.deps.json
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\bin\Debug\net6.0\RpgGame.runtimeconfig.json
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\bin\Debug\net6.0\RpgGame.dll
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\bin\Debug\net6.0\RpgGame.pdb
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\RpgGame.genruntimeconfig.cache
+C:\Users\willy\OneDrive\Área de Trabalho\RPG\Geral\RpgGame\obj\Debug\net6.0\ref\RpgGame.dll

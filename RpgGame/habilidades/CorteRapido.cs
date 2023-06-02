@@ -7,6 +7,7 @@ namespace RpgGame.habilidades
         public CorteRapido() {
             Nome = "Corte Rapido";
             Multiplicador = 1.2;
+            Tier = 1;
         }
     }
 }

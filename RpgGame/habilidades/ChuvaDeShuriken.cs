@@ -8,6 +8,7 @@ namespace RpgGame.habilidades
         {
             Nome = "Chuva de shuriken";
             Multiplicador = 1.2;
+            Tier = 1;
         }
     }
 }
