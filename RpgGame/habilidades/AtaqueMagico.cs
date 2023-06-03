@@ -2,7 +2,7 @@
 
 namespace RpgGame.habilidades
 {
-    public class AtaqueMagico : Habilidade
+    internal class AtaqueMagico : Habilidade
     {
         public AtaqueMagico()
         {

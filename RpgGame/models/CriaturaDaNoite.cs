@@ -3,11 +3,8 @@ using RpgGame.view;
 
 namespace RpgGame.models
 {
-    internal class CriaturaDaNoite : Personagem, IStatus
+    internal class CriaturaDaNoite : PersonagemMonstro
     {
-        public int tier { get; protected set; }
-        public List<Habilidade> habilidades { get; protected set; }
-        public Atributos atributo { get; protected set; } = new Atributos();
         public CriaturaDaNoite(IStatus status) {
             tier = Operacoes.GerarTier();
             Nome = Operacoes.GeradorDeNome(tier);

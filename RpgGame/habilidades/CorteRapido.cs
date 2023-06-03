@@ -2,7 +2,7 @@
 
 namespace RpgGame.habilidades
 {
-    public class CorteRapido : Habilidade
+    internal class CorteRapido : Habilidade
     {
         public CorteRapido() {
             Nome = "Corte Rapido";

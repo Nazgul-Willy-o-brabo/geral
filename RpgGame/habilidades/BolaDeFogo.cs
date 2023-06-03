@@ -2,7 +2,7 @@
 
 namespace RpgGame.habilidades
 {
-    public class BolaDeFogo : Habilidade
+    internal class BolaDeFogo : Habilidade
     {
         public BolaDeFogo()
         {

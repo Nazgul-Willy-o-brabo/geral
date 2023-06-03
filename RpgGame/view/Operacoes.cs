@@ -1,5 +1,8 @@
-﻿using RpgGame.Interface;
+﻿using RpgGame.habilidades;
+using RpgGame.Interface;
 using RpgGame.models;
+using System.Reflection;
+using System.Linq;
 
 namespace RpgGame.view
 {
@@ -175,7 +178,7 @@ namespace RpgGame.view
             if (tier == 1)
             {
                 Base = r.Next(20, 30);
-                maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.2 + 0.7)) * 1.1);//De 0.7 a 0.9 
+                maxHp = ((Base + (nivel * VidaPNivel) * (r.NextDouble() * 0.2 + 0.7)) * 1);//De 0.7 a 0.9 
             }
             else if (tier == 2)
             {
@@ -245,6 +248,62 @@ namespace RpgGame.view
         public static int RealizarFunc(int x, int y, Func<int, int, int> Func) //Uso de delegate
         {
             return Func(x, y);
+        }
+        public static bool FugirCombateBETA(PersonagemJogador p, PersonagemMonstro m)
+        {
+            Random r = new Random();
+            int val = r.Next(1, 100);
+            if (val > 60)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        } //EXCLIR, FOI CRIADO P/ GABRIEL TESTAR
+        public static bool FugirCombate(PersonagemJogador p, PersonagemMonstro m)
+        {
+            Random r = new Random();
+            double chanceFuga = p.atributo.Nivel / (2 * m.atributo.Nivel + m.tier);
+            double fuga = r.NextDouble();
+            if(chanceFuga > fuga)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static List<Habilidade> GerarHab(PersonagemMonstro m)
+        {
+            Random rnd = new Random();
+            List<Habilidade> allSkill = new List<Habilidade>();
+            CarregarHabilidades(ref allSkill);
+            if (m.tier == 4)
+            {
+                var habDisp = allSkill.Where(p => p.Tier == 4);
+                return new List<Habilidade>() { new AtaqueBasico(), '', '', '' };
+            }
+            else
+            {
+                return new List<Habilidade>();
+            }
+        }
+        public static List<Habilidade> CarregarHabilidades(ref List<Habilidade> allSkill)
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            var habilidades = assembly.GetTypes().Where(Type => Type.IsSubclassOf(typeof(Habilidade)) && Type != typeof(AtaqueBasico));
+            foreach (Type subclass in habilidades)
+            {
+                Habilidade habilidade = (Habilidade)Activator.CreateInstance(subclass);
+                allSkill.Add(habilidade);
+            }
+            foreach(Habilidade h in allSkill)
+            {
+                Console.WriteLine(h.Nome);
+            }
+            return allSkill;
         }
     }
 }
