@@ -20,10 +20,10 @@ namespace RpgGame.models
         public override void LevelUp()
         {
             atributo.Nivel++;
-            //RecoverHp();
             atributo.Hp += 3;
             atributo.MaxHp += 3;
             atributo.Atk += 3;
+            atributo.Hp = atributo.MaxHp;
         }
 
         //Remover \/

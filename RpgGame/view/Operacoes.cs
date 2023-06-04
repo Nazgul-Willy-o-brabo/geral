@@ -291,7 +291,7 @@ namespace RpgGame.view
                 HabReturn.AddRange(buscaHabilidade);
                 return HabReturn;
             }
-            else if(Tier == 3)
+            else if (Tier == 3)
             {
                 var habDisp = allSkill.Where(h => h.Tier == 4 || h.Tier == 3);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade);
@@ -300,7 +300,7 @@ namespace RpgGame.view
                 HabReturn.AddRange(buscaHabilidade);
                 return HabReturn;
             }
-            else if(Tier == 2)
+            else if (Tier == 2)
             {
                 var habDisp = allSkill.Where(h => h.Tier == 3 || h.Tier == 2);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade);
@@ -333,6 +333,7 @@ namespace RpgGame.view
         public static List<Habilidade> SelecionarHabilidades(IEnumerable<Habilidade> Skills, ref List<Habilidade> h)
         {
             //double probability = 1.0 - (nivel / 100.0); // Cálculo da probabilidade com base no nível
+
             var habList = Skills.ToList();
             Random rnd = new Random();
             List<int> jaContem = new List<int>();
@@ -346,6 +347,6 @@ namespace RpgGame.view
                 }
             }
             return h;
-        } 
+        } //Implementar a probabiliadade de escolha entre niveis maiores
     }
 }

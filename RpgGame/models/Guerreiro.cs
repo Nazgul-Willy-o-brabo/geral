@@ -1,5 +1,6 @@
 ﻿using RpgGame.habilidades;
 using RpgGame.itens;
+using RpgGame.view;
 
 namespace RpgGame.models
 {
@@ -19,10 +20,10 @@ namespace RpgGame.models
         public override void LevelUp()
         {
             atributo.Nivel++;
-          //RecoverHp();
             atributo.Hp += 4;
             atributo.MaxHp += 4;
             atributo.Atk += 2;
+            atributo.Hp = atributo.MaxHp;
         }
 
         //Remover \/
