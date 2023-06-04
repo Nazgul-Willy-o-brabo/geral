@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RpgGame.habilidades
 {
-    internal class Obliterar : Habilidade
+    internal class Obliterar : Habilidade //Remover
     {
         public Obliterar()
         {

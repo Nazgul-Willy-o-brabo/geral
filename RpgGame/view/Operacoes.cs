@@ -3,6 +3,7 @@ using RpgGame.Interface;
 using RpgGame.models;
 using System.Reflection;
 using System.Linq;
+using System;
 
 namespace RpgGame.view
 {
@@ -134,16 +135,16 @@ namespace RpgGame.view
         {
             int num;
             Random r = new Random();
-            num = r.Next(0, 105);
-            if (num <= 20)
+            num = r.Next(0, 100);
+            if (num <= 35)
             {
                 return 1;
             }
-            else if (num > 20 && num <= 85)
+            else if (num > 35 && num <= 85)
             {
                 return 2;
             }
-            else if (num > 85 && num <= 100)
+            else if (num > 85 && num <= 95)
             {
                 return 3;
             }
@@ -253,12 +254,13 @@ namespace RpgGame.view
         {
             Random r = new Random();
             int val = r.Next(1, 100);
-            if (val > 60)
+            if (val < 60)
             {
-                return true;
-            }else
+                return true; //Sai do combate
+            }
+            else
             {
-                return false;
+                return false; //Não sai do combate
             }
         } //EXCLIR, FOI CRIADO P/ GABRIEL TESTAR
         public static bool FugirCombate(PersonagemJogador p, PersonagemMonstro m)
@@ -266,7 +268,7 @@ namespace RpgGame.view
             Random r = new Random();
             double chanceFuga = p.atributo.Nivel / (2 * m.atributo.Nivel + m.tier);
             double fuga = r.NextDouble();
-            if(chanceFuga > fuga)
+            if (chanceFuga > fuga)
             {
                 return true;
             }
@@ -275,21 +277,48 @@ namespace RpgGame.view
                 return false;
             }
         }
-        public static List<Habilidade> GerarHab(PersonagemMonstro m)
+        public static List<Habilidade> GerarHab(int Tier)
         {
-            Random rnd = new Random();
+            List<Habilidade> buscaHabilidade = new List<Habilidade>();
             List<Habilidade> allSkill = new List<Habilidade>();
             CarregarHabilidades(ref allSkill);
-            if (m.tier == 4)
+            if (Tier == 4)
             {
-                var habDisp = allSkill.Where(p => p.Tier == 4);
-                return new List<Habilidade>() { new AtaqueBasico(), '', '', '' };
+                var habDisp = allSkill.Where(h => h.Tier == 4);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                List<Habilidade> HabReturn = new List<Habilidade>();
+                HabReturn.Add(new AtaqueBasico());
+                HabReturn.AddRange(buscaHabilidade);
+                return HabReturn;
+            }
+            else if(Tier == 3)
+            {
+                var habDisp = allSkill.Where(h => h.Tier == 4 || h.Tier == 3);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                List<Habilidade> HabReturn = new List<Habilidade>();
+                HabReturn.Add(new AtaqueBasico());
+                HabReturn.AddRange(buscaHabilidade);
+                return HabReturn;
+            }
+            else if(Tier == 2)
+            {
+                var habDisp = allSkill.Where(h => h.Tier == 3 || h.Tier == 2);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                List<Habilidade> HabReturn = new List<Habilidade>();
+                HabReturn.Add(new AtaqueBasico());
+                HabReturn.AddRange(buscaHabilidade);
+                return HabReturn;
             }
             else
             {
-                return new List<Habilidade>();
+                var habDisp = allSkill.Where(h => h.Tier == 2 || h.Tier == 1);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                List<Habilidade> HabReturn = new List<Habilidade>();
+                HabReturn.Add(new AtaqueBasico());
+                HabReturn.AddRange(buscaHabilidade);
+                return HabReturn;
             }
-        }
+        } //AJUSTAR
         public static List<Habilidade> CarregarHabilidades(ref List<Habilidade> allSkill)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
@@ -299,11 +328,24 @@ namespace RpgGame.view
                 Habilidade habilidade = (Habilidade)Activator.CreateInstance(subclass);
                 allSkill.Add(habilidade);
             }
-            foreach(Habilidade h in allSkill)
-            {
-                Console.WriteLine(h.Nome);
-            }
             return allSkill;
         }
+        public static List<Habilidade> SelecionarHabilidades(IEnumerable<Habilidade> Skills, ref List<Habilidade> h)
+        {
+            //double probability = 1.0 - (nivel / 100.0); // Cálculo da probabilidade com base no nível
+            var habList = Skills.ToList();
+            Random rnd = new Random();
+            List<int> jaContem = new List<int>();
+            while (jaContem.Count < 3 && habList.Count > 0)
+            {
+                int index = rnd.Next(habList.Count);
+                if (!jaContem.Contains(index))
+                {
+                    h.Add(habList[index]);
+                    jaContem.Add(index);
+                }
+            }
+            return h;
+        } 
     }
 }

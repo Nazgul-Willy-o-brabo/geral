@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace RpgGame.habilidades
 {
-    internal class Genki_Dama : Habilidade //Remover
+    internal class OverKill : Habilidade //Remover
     {
-        public Genki_Dama() {
-            Nome = "Genki-Dama";
-            Multiplicador = 2.5;
+        public OverKill()
+        {
+            Nome = "Overkill";
+            Multiplicador = 99.0;
             Tier = 4;
         }
     }
