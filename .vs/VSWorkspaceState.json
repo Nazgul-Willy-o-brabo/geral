@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\RpgGame",
-    "\\RpgGame\\models"
+    "\\RpgGame\\models",
+    "\\RpgGame\\view"
   ],
-  "SelectedNode": "\\RpgGame\\models\\Personagem.cs",
+  "SelectedNode": "\\RpgGame\\models\\Ninja.cs",
   "PreviewInSolutionExplorer": false
 }

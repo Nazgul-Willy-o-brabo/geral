@@ -12,7 +12,7 @@ namespace RpgGame.models
             int maxHp = Operacoes.RealizarFunc(tier, nivel, Operacoes.GerarHp);
             int atk = Operacoes.RealizarFunc(tier, nivel, Operacoes.GerarAtk);
             int xp = 0; //IMPLEMENTAR
-            habilidades = new List<Habilidade>(Operacoes.GerarHab(tier));
+            habilidades = new List<Habilidade>(Operacoes.GerarHab(tier,nivel));
             atributo = new Atributos { Nivel= nivel, MaxHp = maxHp, Hp = maxHp, Atk = atk, Xp = xp };
         }
         public override string ToString()
