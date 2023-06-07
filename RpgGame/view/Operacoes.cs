@@ -253,7 +253,7 @@ namespace RpgGame.view
         public static bool FugirCombate(PersonagemJogador p, PersonagemMonstro m)
         {
             Random r = new Random();
-            double chanceFuga = p.atributo.Nivel / (2 * m.atributo.Nivel + m.tier);
+            double chanceFuga = p.atributo.Nivel / (2 * m.atributo.Nivel + m.tier); //  Conta meio estranha, sempre beira 50%
             double fuga = r.NextDouble();
             if (chanceFuga > fuga)
             {
@@ -264,7 +264,7 @@ namespace RpgGame.view
                 return false;
             }
         }
-        public static List<Habilidade> GerarHab(int Tier)
+        public static List<Habilidade> GerarHab(int Tier, int nivel)
         {
             List<Habilidade> buscaHabilidade = new List<Habilidade>();
             List<Habilidade> allSkill = new List<Habilidade>();
@@ -272,7 +272,7 @@ namespace RpgGame.view
             if (Tier == 4)
             {
                 var habDisp = allSkill.Where(h => h.Tier == 4);
-                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier,nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
@@ -281,7 +281,7 @@ namespace RpgGame.view
             else if (Tier == 3)
             {
                 var habDisp = allSkill.Where(h => h.Tier == 4 || h.Tier == 3);
-                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
@@ -290,7 +290,7 @@ namespace RpgGame.view
             else if (Tier == 2)
             {
                 var habDisp = allSkill.Where(h => h.Tier == 3 || h.Tier == 2);
-                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
@@ -299,7 +299,7 @@ namespace RpgGame.view
             else
             {
                 var habDisp = allSkill.Where(h => h.Tier == 2 || h.Tier == 1);
-                SelecionarHabilidades(habDisp, ref buscaHabilidade);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
@@ -317,23 +317,52 @@ namespace RpgGame.view
             }
             return allSkill;
         }
-        public static List<Habilidade> SelecionarHabilidades(IEnumerable<Habilidade> Skills, ref List<Habilidade> h)
+        public static List<Habilidade> SelecionarHabilidades(IEnumerable<Habilidade> Skills, ref List<Habilidade> h, int Tier, int nivel)
         {
-            //double probability = 1.0 - (nivel / 100.0); // Cálculo da probabilidade com base no nível
-
-            var habList = Skills.ToList();
+            double probability = 1.0 - (nivel / 100.0); // Cálculo da probabilidade com base no nível
             Random rnd = new Random();
             List<int> jaContem = new List<int>();
-            while (jaContem.Count < 3 && habList.Count > 0)
+            if (!(Tier == 4))
             {
-                int index = rnd.Next(habList.Count);
-                if (!jaContem.Contains(index))
+                var listDTier = Skills.Where(t => t.Tier == Tier).ToList();
+                var listTTier = Skills.Where(t => t.Tier == Tier + 1).ToList();
+                while (jaContem.Count < 3)
                 {
-                    h.Add(habList[index]);
-                    jaContem.Add(index);
+                    if (rnd.NextDouble() < probability) //low
+                    {
+                        int index = rnd.Next(listDTier.Count);
+                        if (!jaContem.Contains(index))
+                        {
+                            h.Add(listDTier[index]);
+                            jaContem.Add(index);
+                        }
+                    }
+                    else
+                    {
+                        int index = rnd.Next(listDTier.Count);
+                        if (!jaContem.Contains(index))
+                        {
+                            h.Add(listTTier[index]);
+                            jaContem.Add(index);
+                        }
+                    }
                 }
+                return h;
             }
-            return h;
+            else
+            {
+                var habList = Skills.ToList();
+                while (jaContem.Count < 3 && habList.Count > 0)
+                {
+                    int index = rnd.Next(habList.Count);
+                    if (!jaContem.Contains(index))
+                    {
+                        h.Add(habList[index]);
+                        jaContem.Add(index);
+                    }
+                }
+                return h;
+            }
         } //Implementar a probabiliadade de escolha entre niveis maiores
     }
 }

@@ -15,7 +15,7 @@ namespace RpgGame.models
             atributo.MaxHp = 36;
             atributo.Atk = 6;
             atributo.Xp = 0;
-            atributo.Nivel = 1;
+            atributo.Nivel = 100;
             inventario = new List<Item> { new EspadaMadeira(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido() };
         }

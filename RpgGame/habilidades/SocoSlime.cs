@@ -1,13 +1,13 @@
 ﻿using RpgGame.models;
 namespace RpgGame.habilidades
 {
-    internal class SocoForte : Habilidade
+    internal class SocoSlime : Habilidade
     {
-        public SocoForte()
+        public SocoSlime()
         {
-            Nome = "Soco Forte";
+            Nome = "Soco Slime";
             Multiplicador = 1.8;
-            Tier = 3;
+            Tier = 2;
         }
     }
 }
