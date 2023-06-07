@@ -7,7 +7,7 @@ namespace RpgGame.itens
         public Bomba()
         {
             nome = "Bomba";
-            Dano = 12;
+            Dano = 0.25;
         }
     }
 }

@@ -1,0 +1,32 @@
+﻿Classes mudadas
+
+Operacoes
+PersonagemJogador
+Mago
+Guerreiro
+Arqueiro
+CriaturaDaNoite
+ItemCombate
+PersonagemMonstro
+ArcoSimples -> Adaga de madeira
+CajadoSimples -> Cajado de madeira
+PocaoCura
+ItemConsumivel
+Bomba
+Program
+
+
+Remover:
+ChuvaDeShuriken
+CorteRapido
+Genki-Dama
+Obliterar
+OverKill
+SocoExplosivo
+SocoForte
+SocoMeleca
+BolaDeFogo
+
+
+INSERIR:
+Custo de mana nas habilidades

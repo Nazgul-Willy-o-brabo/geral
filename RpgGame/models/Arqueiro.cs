@@ -3,17 +3,19 @@ using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Ninja : PersonagemJogador
+    public sealed class Arqueiro : PersonagemJogador //Classe alterada
     {
-        public Ninja(string nome)
+        public Arqueiro(string nome)
         {
             Nome = nome;
+            MaxMana = 100;
+            Mana = MaxMana;
             atributo.Hp = 26;
             atributo.MaxHp = 26;
             atributo.Atk = 8;
             atributo.Xp = 0;
             atributo.Nivel = 1;
-            inventario = new List<Item> { new AdagasDePedra(), new PocaoCura(), new PocaoCura() };
+            inventario = new List<Item> { new ArcoSimples(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new ChuvaDeShuriken() };
         }
         public override void LevelUp()

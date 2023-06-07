@@ -3,17 +3,19 @@ using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Mago : PersonagemJogador
+    public sealed class Mago : PersonagemJogador //Classe Alterada
     {
         public Mago(string nome)
         {
             Nome = nome;
+            MaxMana = 100;
+            Mana = MaxMana;
             atributo.Hp = 30;
             atributo.MaxHp = 30;
             atributo.Atk = 7;
             atributo.Xp = 0;
             atributo.Nivel = 1;
-            inventario = new List<Item> { new CajadoMadeira(), new PocaoCura(), new PocaoCura() };
+            inventario = new List<Item> { new CajadoSimples(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new AtaqueMagico() };
         }
 

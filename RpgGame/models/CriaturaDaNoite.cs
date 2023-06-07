@@ -6,6 +6,7 @@ namespace RpgGame.models
     internal class CriaturaDaNoite : PersonagemMonstro
     {
         public CriaturaDaNoite(IStatus status) {
+            Natureza = Operacoes.GeraNatureza();
             tier = Operacoes.GerarTier();
             Nome = Operacoes.GeradorDeNome(tier);
             int nivel = Operacoes.GerarNivel(tier, status);
@@ -19,7 +20,7 @@ namespace RpgGame.models
         {
             string HabStr = string.Join(", ", habilidades.Select(Hab => Hab.Nome));
 
-            return $"Nome: {Nome}\nTier: {tier}\nHp: {atributo.Hp}\nMaxHP {atributo.MaxHp}\nNivel {atributo.Nivel}\nAtk: {atributo.Atk}\nHabilidades {HabStr}";
+            return $"Nome: {Nome}\nTier: {tier}\nHp: {atributo.Hp}\nMaxHP {atributo.MaxHp}\nNatureza {Natureza}\nNivel {atributo.Nivel}\nAtk: {atributo.Atk}\nHabilidades {HabStr}";
         }
     }
 }

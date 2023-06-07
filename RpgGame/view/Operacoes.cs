@@ -7,7 +7,7 @@ using System;
 
 namespace RpgGame.view
 {
-    public static class Operacoes
+    public static class Operacoes //Classe alterada
     {
         public static void CriarPersonagem(ref PersonagemJogador personagem)
         {
@@ -33,7 +33,7 @@ namespace RpgGame.view
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case '3':
-                    personagem = new Ninja(nome);
+                    personagem = new Arqueiro(nome);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"O Ninja {nome} despertou no mundo!\n");
@@ -71,28 +71,21 @@ namespace RpgGame.view
             if (op == 1)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"Substituido {list[0].Nome} por {hab.Nome}");
-                Console.ForegroundColor = ConsoleColor.White;
-                list[0] = hab;
-            }
-            else if (op == 2)
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Substituido {list[1].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[1] = hab;
             }
-            else if (op == 3)
+            else if (op == 2)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Substituido {list[2].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[2] = hab;
             }
-            else if (op == 4)
+            else if (op == 3)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"Substituido {list[3].Nome} por {hab}");
+                Console.WriteLine($"Substituido {list[3].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[3] = hab;
             }
@@ -104,14 +97,21 @@ namespace RpgGame.view
         {
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine($"{i + 1} -- {list[i].Nome}");
+                if (list[i].GetType() == typeof(AtaqueBasico))
+                {
+                    continue;
+                }
+                Console.WriteLine($"{i} -- {list[i].Nome}");
             }
         }
-        public static void GerarMonstro()
+        public static string GeraNatureza()
         {
-
-        }
-        public static string GeradorDeNome(int tier)
+            Random ran = new Random();
+            List<string> types = new List<string>() { "Aquatico", "Florestal", "Morto-vivo" };
+            string nature = types[ran.Next(types.Count)];
+            return nature;
+        } //Adicionar mais natures
+        public static string GeradorDeNome(int tier) //Inserir a nature e, baseado nela, gerar nomes nos temas.
         {
             string name;
             Random ran = new Random();
@@ -250,19 +250,6 @@ namespace RpgGame.view
         {
             return Func(x, y);
         }
-        public static bool FugirCombateBETA(PersonagemJogador p, PersonagemMonstro m)
-        {
-            Random r = new Random();
-            int val = r.Next(1, 100);
-            if (val < 60)
-            {
-                return true; //Sai do combate
-            }
-            else
-            {
-                return false; //Não sai do combate
-            }
-        } //EXCLIR, FOI CRIADO P/ GABRIEL TESTAR
         public static bool FugirCombate(PersonagemJogador p, PersonagemMonstro m)
         {
             Random r = new Random();
@@ -318,7 +305,7 @@ namespace RpgGame.view
                 HabReturn.AddRange(buscaHabilidade);
                 return HabReturn;
             }
-        } //AJUSTAR
+        }
         public static List<Habilidade> CarregarHabilidades(ref List<Habilidade> allSkill)
         {
             Assembly assembly = Assembly.GetExecutingAssembly();

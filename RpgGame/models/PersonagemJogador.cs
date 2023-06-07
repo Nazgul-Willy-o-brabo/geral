@@ -1,10 +1,13 @@
 ﻿using RpgGame.Interface;
+using RpgGame.itens;
 using RpgGame.view;
 
 namespace RpgGame.models
 {
-    public abstract class PersonagemJogador : Personagem, IStatus
+    public abstract class PersonagemJogador : Personagem, IStatus //Classe Alterada
     {
+        public int Mana;
+        public int MaxMana;
         public List<Item>? inventario { get; protected set; }
         public List<Habilidade>? habilidades { get; protected set; }
         public Atributos atributo { get; protected set; } = new Atributos();
@@ -19,8 +22,11 @@ namespace RpgGame.models
                     if (inv[i] is ItemConsumivel consumivel)
                     {
                         Console.WriteLine($"{i + 1} - {inv[i].nome}");
+                        consumivel.Usar(this);
+                        inv.Remove(inv[i]);
                     }
                 }
+
             }
             else if (item is ItemCombate)
             {

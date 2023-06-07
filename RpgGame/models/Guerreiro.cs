@@ -4,12 +4,14 @@ using RpgGame.view;
 
 namespace RpgGame.models
 {
-    public sealed class Guerreiro : PersonagemJogador
+    public sealed class Guerreiro : PersonagemJogador //Classe Alterada
     {
         public Guerreiro(string nome)
         {
             Nome = nome;
-            atributo.Hp = 36;
+            MaxMana = 100;
+            Mana = MaxMana;
+            atributo.Hp = 1;
             atributo.MaxHp = 36;
             atributo.Atk = 6;
             atributo.Xp = 0;

@@ -2,6 +2,8 @@
 {
     public abstract class ItemCombate : Item
     {
-        public int Dano { get; protected set; }
+        public double Dano { get; protected set; }
+
+        //public abstract void usarItemDmg(); //Fazer a logica p/ usar o item
     }
 }
