@@ -3,28 +3,29 @@ using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Arqueiro : PersonagemJogador //Classe alterada
+    public sealed class Assassino : PersonagemJogador //Classe alterada
     {
-        public Arqueiro(string nome)
+        public Assassino(string nome)
         {
             Nome = nome;
-            MaxMana = 100;
-            Mana = MaxMana;
-            atributo.Hp = 26;
+            atributo.MaxMana = 35;
+            atributo.Mana = atributo.MaxMana;
             atributo.MaxHp = 26;
+            atributo.Hp = atributo.MaxHp;
             atributo.Atk = 8;
             atributo.Xp = 0;
             atributo.Nivel = 1;
-            inventario = new List<Item> { new ArcoSimples(), new PocaoCura(), new PocaoCura() };
-            habilidades = new List<Habilidade> { new AtaqueBasico(), new ChuvaDeShuriken() };
+            inventario = new List<Item> { new AdagaSimples(), new PocaoCura(), new PocaoCura() };
+            habilidades = new List<Habilidade> { new AtaqueBasico(), new GolpeFocado() };
         }
         public override void LevelUp()
         {
             atributo.Nivel++;
-            atributo.Hp += 2;
             atributo.MaxHp += 2;
+            atributo.MaxMana += 3;
             atributo.Atk += 4;
             atributo.Hp = atributo.MaxHp;
+            atributo.Mana = atributo.MaxMana;
         }
 
         //Remover \/

@@ -33,7 +33,7 @@ namespace RpgGame.view
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case '3':
-                    personagem = new Arqueiro(nome);
+                    personagem = new Assassino(nome);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"O Ninja {nome} despertou no mundo!\n");

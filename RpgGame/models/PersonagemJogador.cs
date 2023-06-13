@@ -6,8 +6,6 @@ namespace RpgGame.models
 {
     public abstract class PersonagemJogador : Personagem, IStatus //Classe Alterada
     {
-        public int Mana;
-        public int MaxMana;
         public List<Item>? inventario { get; protected set; }
         public List<Habilidade>? habilidades { get; protected set; }
         public Atributos atributo { get; protected set; } = new Atributos();
@@ -16,14 +14,14 @@ namespace RpgGame.models
         {
             if (item is ItemConsumivel)
             {
-                Console.WriteLine("\nSelecione o item para usar");
+                Console.WriteLine("\nSelecione o item para usar"); //Remover
                 for (int i = 0; i < inv.Count; i++)
                 {
                     if (inv[i] is ItemConsumivel consumivel)
                     {
-                        Console.WriteLine($"{i + 1} - {inv[i].nome}");
-                        consumivel.Usar(this);
-                        inv.Remove(inv[i]);
+                        Console.WriteLine($"{i + 1} - {inv[i].nome}"); //Remover
+                        consumivel.Usar(this); //Usa o item
+                        inv.Remove(inv[i]); //Remover do inv
                     }
                 }
 

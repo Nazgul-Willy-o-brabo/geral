@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\RpgGame",
+    "\\RpgGame\\bin",
     "\\RpgGame\\models"
   ],
-  "SelectedNode": "\\RpgGame\\models\\CriaturaDaNoite.cs",
+  "SelectedNode": "\\RpgGame\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

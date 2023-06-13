@@ -2,10 +2,11 @@
 
 namespace RpgGame.habilidades
 {
-    internal class CorteRapido : Habilidade
+    internal class GolpeFocado : Habilidade
     {
-        public CorteRapido() {
-            Nome = "Corte Rapido";
+        public GolpeFocado()
+        {
+            Nome = "Golpe focado";
             Multiplicador = 1.2;
             Tier = 1;
             ClassType = 3;

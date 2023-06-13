@@ -6,19 +6,19 @@ Item i = new PocaoCura();
 
 
 
-Console.WriteLine("Jogo Rpg\n\n");
-PersonagemJogador Player = null;
-Operacoes.CriarPersonagem(ref Player);
-Console.WriteLine(Player);
-Console.WriteLine("=========================");
-Player.UsarItem(i,Player.inventario);
-Console.WriteLine(Player);
-Console.WriteLine("=========================");
-Player.UsarItem(i, Player.inventario);
-Console.WriteLine(Player);
-Console.WriteLine("=========================");
-Player.UsarItem(i, Player.inventario);
-Console.WriteLine(Player);
+//Console.WriteLine("Jogo Rpg\n\n");
+//PersonagemJogador Player = null;
+//Operacoes.CriarPersonagem(ref Player);
+//Console.WriteLine(Player);
+//Console.WriteLine("=========================");
+//Player.UsarItem(i,Player.inventario);
+//Console.WriteLine(Player);
+//Console.WriteLine("=========================");
+//Player.UsarItem(i, Player.inventario);
+//Console.WriteLine(Player);
+//Console.WriteLine("=========================");
+//Player.UsarItem(i, Player.inventario);
+//Console.WriteLine(Player);
 
 //for (int j = 0; j < 30; j++)
 //{

@@ -10,8 +10,8 @@ namespace RpgGame.habilidades
     internal class Genki_Dama : Habilidade //Remover
     {
         public Genki_Dama() {
-            Nome = "Genki-Dama";
-            Multiplicador = 2.5;
+            Nome = "Meteoro";
+            Multiplicador = 2.0;
             Tier = 4;
         }
     }

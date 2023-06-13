@@ -2,11 +2,11 @@
 
 namespace RpgGame.itens
 {
-    public class ArcoSimples : ItemEquipavel
+    public class AdagaSimples : ItemEquipavel
     {
-        public ArcoSimples()
+        public AdagaSimples()
         {
-            nome = "Arco Simples";
+            nome = "Adaga simples";
             ItemMult = 1;
         }
     }
