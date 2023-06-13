@@ -1,5 +1,4 @@
-﻿using RpgGame.habilidades;
-using RpgGame.itens;
+﻿using RpgGame.itens;
 using RpgGame.models;
 using RpgGame.view;
 
