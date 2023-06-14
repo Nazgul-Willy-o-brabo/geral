@@ -391,9 +391,57 @@ namespace RpgGame.view
             }
             return playerHab;
         }
-        public static void Upgrade()
+        public static void Upgrade(PersonagemJogador p)
         {
-
+            List<Habilidade> hab = CarregarPSkills(p);
+            List<Object> upgrades = new List<Object>();
+            Atributos at = new Atributos();
+            Random r = new Random();
+            for (int i = 0; i < 100; i++)
+            {
+                double val = r.NextDouble();
+                if (val > 0.96)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 4).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if(val > 0.88 && val <= 0.96)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 3).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.70 && val <= 0.88)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 2).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.40 && val <= 0.70)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 1).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.30 && val <= 0.40)
+                {
+                    var listAdd = at.Atk + 2;
+                    upgrades.Add(listAdd);
+                }
+            }
+            foreach(Object x in upgrades)
+            {
+                if(x is Habilidade habx)
+                {
+                    Console.WriteLine(habx.Nome);
+                }
+                else if(x is Atributos atr)
+                {
+                    Console.WriteLine(atr.Atk);
+                    Console.WriteLine(atr.Atk += 2);
+                }
+            }
         }
     }
 }

@@ -61,4 +61,3 @@ Operacoes.Upgrade(player);
 //    Console.WriteLine(new CriaturaDaNoite(player));
 //    Console.WriteLine();
 //}
-
