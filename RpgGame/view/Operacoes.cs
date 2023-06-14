@@ -364,5 +364,9 @@ namespace RpgGame.view
                 return h;
             }
         } //Implementar a probabiliadade de escolha entre niveis maiores
+        public static void Upgrade(IStatus p)
+        {
+
+        }
     }
 }
