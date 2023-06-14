@@ -26,17 +26,6 @@ namespace RpgGame.models
                 }
 
             }
-            else if (item is ItemCombate)
-            {
-                Console.WriteLine("\nSelecione o item para usar");
-                for (int i = 0; i < inv.Count; i++)
-                {
-                    if (inv[i] is ItemConsumivel consumivel)
-                    {
-                        Console.WriteLine($"{i + 1} - {inv[i].nome}");
-                    }
-                }
-            }
         }
         public void AprenderHab(Habilidade hab)
         {

@@ -46,3 +46,15 @@ Skill Custo
 1.6 = 30 a 45
 1.8 = 50 a 70
 2.0+ = 70 a 160
+
+
+Mudanças 13/06
+PocaoCura
+Guerreiro
+Habilidade
+Item
+Mago
+PersonagemJogador
+Atributos
+Operacoes
+"Habilidades"

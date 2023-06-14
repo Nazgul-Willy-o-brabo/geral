@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj": {}
+    "C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\RpgGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj": {
+    "C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\RpgGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj",
+        "projectUniqueName": "C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\RpgGame.csproj",
         "projectName": "RpgGame",
-        "projectPath": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj",
-        "packagesPath": "C:\\Users\\willy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\obj\\",
+        "projectPath": "C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\RpgGame.csproj",
+        "packagesPath": "C:\\Users\\willy.costa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\willy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\willy.costa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

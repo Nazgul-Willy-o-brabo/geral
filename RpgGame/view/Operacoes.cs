@@ -9,12 +9,17 @@ namespace RpgGame.view
 {
     public static class Operacoes //Classe alterada
     {
+        //Variaveis staticas
+        static List<Habilidade> habCarregadas = CarregarHabilidades();
+        public static Dictionary<Type, List<Habilidade>> HabPorClasse = new Dictionary<Type, List<Habilidade>>();
+
+        //Metodos
         public static void CriarPersonagem(ref PersonagemJogador personagem)
         {
             Console.Write("Digite o nome do personagem: ");
             string nome = Console.ReadLine();
             Console.WriteLine("Selecione uma classe para o personagem:");
-            Console.WriteLine("1 = Guerreiro \n2 = Mago\n3 = Ninja");
+            Console.WriteLine("1 = Guerreiro \n2 = Mago\n3 = Assassino");
             char op = Console.ReadKey().KeyChar;
             switch (op)
             {
@@ -236,7 +241,7 @@ namespace RpgGame.view
                 if (nivel > 30)
                 {
 
-                    Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * ((r.NextDouble() * 0.3 + 0.9))) * 0.9);//De 0,9 a 1.2 ;
+                    Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * ((r.NextDouble() * 0.1 + 0.9))) * 0.9);//De 0,9 a 1.2 ;
                 }
                 else
                 {
@@ -267,12 +272,10 @@ namespace RpgGame.view
         public static List<Habilidade> GerarHab(int Tier, int nivel)
         {
             List<Habilidade> buscaHabilidade = new List<Habilidade>();
-            List<Habilidade> allSkill = new List<Habilidade>();
-            CarregarHabilidades(ref allSkill);
             if (Tier == 4)
             {
-                var habDisp = allSkill.Where(h => h.Tier == 4);
-                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier,nivel);
+                var habDisp = habCarregadas.Where(h => h.Tier == 4);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
@@ -280,7 +283,7 @@ namespace RpgGame.view
             }
             else if (Tier == 3)
             {
-                var habDisp = allSkill.Where(h => h.Tier == 4 || h.Tier == 3);
+                var habDisp = habCarregadas.Where(h => h.Tier == 4 || h.Tier == 3);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
@@ -289,7 +292,7 @@ namespace RpgGame.view
             }
             else if (Tier == 2)
             {
-                var habDisp = allSkill.Where(h => h.Tier == 3 || h.Tier == 2);
+                var habDisp = habCarregadas.Where(h => h.Tier == 3 || h.Tier == 2);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
@@ -298,24 +301,13 @@ namespace RpgGame.view
             }
             else
             {
-                var habDisp = allSkill.Where(h => h.Tier == 2 || h.Tier == 1);
+                var habDisp = habCarregadas.Where(h => h.Tier == 2 || h.Tier == 1);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
                 return HabReturn;
             }
-        }
-        public static List<Habilidade> CarregarHabilidades(ref List<Habilidade> allSkill)
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            var habilidades = assembly.GetTypes().Where(Type => Type.IsSubclassOf(typeof(Habilidade)) && Type != typeof(AtaqueBasico));
-            foreach (Type subclass in habilidades)
-            {
-                Habilidade habilidade = (Habilidade)Activator.CreateInstance(subclass);
-                allSkill.Add(habilidade);
-            }
-            return allSkill;
         }
         public static List<Habilidade> SelecionarHabilidades(IEnumerable<Habilidade> Skills, ref List<Habilidade> h, int Tier, int nivel)
         {
@@ -364,7 +356,42 @@ namespace RpgGame.view
                 return h;
             }
         } //Implementar a probabiliadade de escolha entre niveis maiores
-        public static void Upgrade(IStatus p)
+        public static List<Habilidade> CarregarHabilidades()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            var habilidades = assembly.GetTypes().Where(Type => Type.IsSubclassOf(typeof(Habilidade)) && Type != typeof(AtaqueBasico));
+            List<Habilidade> allSkill = new List<Habilidade>();
+            foreach (Type subclass in habilidades)
+            {
+                Habilidade habilidade = (Habilidade)Activator.CreateInstance(subclass);
+                allSkill.Add(habilidade);
+            }
+            return allSkill;
+        }
+        public static List<Habilidade> CarregarPSkills(PersonagemJogador p)
+        {
+            Type tipo = p.GetType();
+            if (HabPorClasse.ContainsKey(tipo))
+            {
+                return HabPorClasse[tipo];
+            }
+
+            List<Habilidade> playerHab;
+            if (p is Guerreiro)
+            {
+                playerHab = habCarregadas.Where(x => x.ClassType == 1).ToList();
+            }
+            else if (p is Mago)
+            {
+                playerHab = habCarregadas.Where(x => x.ClassType == 2).ToList();
+            }
+            else
+            {
+                playerHab = habCarregadas.Where(x => x.ClassType == 3).ToList();
+            }
+            return playerHab;
+        }
+        public static void Upgrade()
         {
 
         }

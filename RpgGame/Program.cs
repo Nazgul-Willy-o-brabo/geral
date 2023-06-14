@@ -53,10 +53,12 @@ using RpgGame.view;
 
 PersonagemJogador player = null;
 Operacoes.CriarPersonagem(ref player);
+Operacoes.Upgrade(player);
 
-for(int i = 0; i < 10; i++)
-{
-    Console.WriteLine(new CriaturaDaNoite(player));
-    Console.WriteLine();
-}
+
+//for (int i = 0; i < 10; i++)
+//{
+//    Console.WriteLine(new CriaturaDaNoite(player));
+//    Console.WriteLine();
+//}
 
