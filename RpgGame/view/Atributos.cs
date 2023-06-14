@@ -7,5 +7,8 @@
             public int Atk { get; set; }
             public int Xp { get; set; }
             public int Nivel { get; set; }
+            public int Mana { get; set; }
+            public int MaxMana { get; set; }
+
     }
 }

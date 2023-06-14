@@ -4,14 +4,16 @@ using RpgGame.view;
 
 namespace RpgGame.models
 {
-    public sealed class Guerreiro : PersonagemJogador
+    public sealed class Guerreiro : PersonagemJogador //Classe Alterada
     {
         public Guerreiro(string nome)
         {
             Nome = nome;
-            atributo.Hp = 36;
+            atributo.MaxMana = 45;
+            atributo.Mana = atributo.MaxMana;
+            atributo.Hp = 1;
             atributo.MaxHp = 36;
-            atributo.Atk = 6;
+            atributo.Atk = 7;
             atributo.Xp = 0;
             atributo.Nivel = 100;
             inventario = new List<Item> { new EspadaMadeira(), new PocaoCura(), new PocaoCura() };
@@ -20,10 +22,11 @@ namespace RpgGame.models
         public override void LevelUp()
         {
             atributo.Nivel++;
-            atributo.Hp += 4;
             atributo.MaxHp += 4;
-            atributo.Atk += 2;
+            atributo.MaxMana += 3;
+            atributo.Atk += 3;
             atributo.Hp = atributo.MaxHp;
+            atributo.Mana = atributo.MaxMana;
         }
 
         //Remover \/

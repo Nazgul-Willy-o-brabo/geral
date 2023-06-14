@@ -7,14 +7,19 @@ using System;
 
 namespace RpgGame.view
 {
-    public static class Operacoes
+    public static class Operacoes //Classe alterada
     {
+        //Variaveis staticas
+        static List<Habilidade> habCarregadas = CarregarHabilidades();
+        public static Dictionary<Type, List<Habilidade>> HabPorClasse = new Dictionary<Type, List<Habilidade>>();
+
+        //Metodos
         public static void CriarPersonagem(ref PersonagemJogador personagem)
         {
             Console.Write("Digite o nome do personagem: ");
             string nome = Console.ReadLine();
             Console.WriteLine("Selecione uma classe para o personagem:");
-            Console.WriteLine("1 = Guerreiro \n2 = Mago\n3 = Ninja");
+            Console.WriteLine("1 = Guerreiro \n2 = Mago\n3 = Assassino");
             char op = Console.ReadKey().KeyChar;
             switch (op)
             {
@@ -33,7 +38,7 @@ namespace RpgGame.view
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
                 case '3':
-                    personagem = new Ninja(nome);
+                    personagem = new Assassino(nome);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"O Ninja {nome} despertou no mundo!\n");
@@ -71,28 +76,21 @@ namespace RpgGame.view
             if (op == 1)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"Substituido {list[0].Nome} por {hab.Nome}");
-                Console.ForegroundColor = ConsoleColor.White;
-                list[0] = hab;
-            }
-            else if (op == 2)
-            {
-                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Substituido {list[1].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[1] = hab;
             }
-            else if (op == 3)
+            else if (op == 2)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Substituido {list[2].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[2] = hab;
             }
-            else if (op == 4)
+            else if (op == 3)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"Substituido {list[3].Nome} por {hab}");
+                Console.WriteLine($"Substituido {list[3].Nome} por {hab.Nome}");
                 Console.ForegroundColor = ConsoleColor.White;
                 list[3] = hab;
             }
@@ -104,14 +102,21 @@ namespace RpgGame.view
         {
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine($"{i + 1} -- {list[i].Nome}");
+                if (list[i].GetType() == typeof(AtaqueBasico))
+                {
+                    continue;
+                }
+                Console.WriteLine($"{i} -- {list[i].Nome}");
             }
         }
-        public static void GerarMonstro()
+        public static string GeraNatureza()
         {
-
-        }
-        public static string GeradorDeNome(int tier)
+            Random ran = new Random();
+            List<string> types = new List<string>() { "Aquatico", "Florestal", "Morto-vivo" };
+            string nature = types[ran.Next(types.Count)];
+            return nature;
+        } //Adicionar mais natures
+        public static string GeradorDeNome(int tier) //Inserir a nature e, baseado nela, gerar nomes nos temas.
         {
             string name;
             Random ran = new Random();
@@ -236,7 +241,7 @@ namespace RpgGame.view
                 if (nivel > 30)
                 {
 
-                    Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * ((r.NextDouble() * 0.3 + 0.9))) * 0.9);//De 0,9 a 1.2 ;
+                    Atk = ((Base + ((nivel * AtkPNivel) * ((r.NextDouble() * 0.2) + 0.9)) * ((r.NextDouble() * 0.1 + 0.9))) * 0.9);//De 0,9 a 1.2 ;
                 }
                 else
                 {
@@ -250,19 +255,6 @@ namespace RpgGame.view
         {
             return Func(x, y);
         }
-        public static bool FugirCombateBETA(PersonagemJogador p, PersonagemMonstro m)
-        {
-            Random r = new Random();
-            int val = r.Next(1, 100);
-            if (val < 60)
-            {
-                return true; //Sai do combate
-            }
-            else
-            {
-                return false; //Não sai do combate
-            }
-        } //EXCLIR, FOI CRIADO P/ GABRIEL TESTAR
         public static bool FugirCombate(PersonagemJogador p, PersonagemMonstro m)
         {
             Random r = new Random();
@@ -280,12 +272,10 @@ namespace RpgGame.view
         public static List<Habilidade> GerarHab(int Tier, int nivel)
         {
             List<Habilidade> buscaHabilidade = new List<Habilidade>();
-            List<Habilidade> allSkill = new List<Habilidade>();
-            CarregarHabilidades(ref allSkill);
             if (Tier == 4)
             {
-                var habDisp = allSkill.Where(h => h.Tier == 4);
-                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier,nivel);
+                var habDisp = habCarregadas.Where(h => h.Tier == 4);
+                SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
@@ -293,7 +283,7 @@ namespace RpgGame.view
             }
             else if (Tier == 3)
             {
-                var habDisp = allSkill.Where(h => h.Tier == 4 || h.Tier == 3);
+                var habDisp = habCarregadas.Where(h => h.Tier == 4 || h.Tier == 3);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
@@ -302,7 +292,7 @@ namespace RpgGame.view
             }
             else if (Tier == 2)
             {
-                var habDisp = allSkill.Where(h => h.Tier == 3 || h.Tier == 2);
+                var habDisp = habCarregadas.Where(h => h.Tier == 3 || h.Tier == 2);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
@@ -311,24 +301,13 @@ namespace RpgGame.view
             }
             else
             {
-                var habDisp = allSkill.Where(h => h.Tier == 2 || h.Tier == 1);
+                var habDisp = habCarregadas.Where(h => h.Tier == 2 || h.Tier == 1);
                 SelecionarHabilidades(habDisp, ref buscaHabilidade, Tier, nivel);
                 List<Habilidade> HabReturn = new List<Habilidade>();
                 HabReturn.Add(new AtaqueBasico());
                 HabReturn.AddRange(buscaHabilidade);
                 return HabReturn;
             }
-        }
-        public static List<Habilidade> CarregarHabilidades(ref List<Habilidade> allSkill)
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            var habilidades = assembly.GetTypes().Where(Type => Type.IsSubclassOf(typeof(Habilidade)) && Type != typeof(AtaqueBasico));
-            foreach (Type subclass in habilidades)
-            {
-                Habilidade habilidade = (Habilidade)Activator.CreateInstance(subclass);
-                allSkill.Add(habilidade);
-            }
-            return allSkill;
         }
         public static List<Habilidade> SelecionarHabilidades(IEnumerable<Habilidade> Skills, ref List<Habilidade> h, int Tier, int nivel)
         {
@@ -352,7 +331,7 @@ namespace RpgGame.view
                     }
                     else
                     {
-                        int index = rnd.Next(listDTier.Count);
+                        int index = rnd.Next(listTTier.Count);
                         if (!jaContem.Contains(index))
                         {
                             h.Add(listTTier[index]);
@@ -377,5 +356,106 @@ namespace RpgGame.view
                 return h;
             }
         } //Implementar a probabiliadade de escolha entre niveis maiores
+        public static List<Habilidade> CarregarHabilidades()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            var habilidades = assembly.GetTypes().Where(Type => Type.IsSubclassOf(typeof(Habilidade)) && Type != typeof(AtaqueBasico));
+            List<Habilidade> allSkill = new List<Habilidade>();
+            foreach (Type subclass in habilidades)
+            {
+                Habilidade habilidade = (Habilidade)Activator.CreateInstance(subclass);
+                allSkill.Add(habilidade);
+            }
+            return allSkill;
+        }
+        public static List<Habilidade> CarregarPSkills(PersonagemJogador p)
+        {
+            Type tipo = p.GetType();
+            if (HabPorClasse.ContainsKey(tipo))
+            {
+                return HabPorClasse[tipo];
+            }
+
+            List<Habilidade> playerHab;
+            if (p is Guerreiro)
+            {
+                playerHab = habCarregadas.Where(x => x.ClassType == 1).ToList();
+            }
+            else if (p is Mago)
+            {
+                playerHab = habCarregadas.Where(x => x.ClassType == 2).ToList();
+            }
+            else
+            {
+                playerHab = habCarregadas.Where(x => x.ClassType == 3).ToList();
+            }
+            return playerHab;
+        }
+        public static List<Object> Upgrade(PersonagemJogador p)
+        {
+            List<Habilidade> hab = CarregarPSkills(p);
+            List<Object> upgrades = new List<Object>();
+            Atributos at = new Atributos();
+            Random r = new Random();
+            for (int i = 0; i < 3; i++)
+            {
+                double val = r.NextDouble();
+                if (val > 0.96)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 4).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.88 && val <= 0.96)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 3).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.70 && val <= 0.88)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 2).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.40 && val <= 0.70)
+                {
+                    var listAdd = hab.Where(x => x.Tier == 1).ToList();
+                    int index = r.Next(listAdd.Count);
+                    upgrades.Add(listAdd[index]);
+                }
+                else if (val > 0.30 && val <= 0.40)
+                {
+                    var listAdd = new Atributos { Atk = 2 };
+                    upgrades.Add(listAdd);
+                }
+                else if (val > 0.15 && val <= 0.30)
+                {
+                    var listAdd = new Atributos { MaxMana = 3 };
+                    upgrades.Add(listAdd);
+                }
+                else
+                {
+                    var listAdd = new Atributos { MaxHp = 3 };
+                    upgrades.Add(listAdd);
+                }
+            }
+            foreach (Object x in upgrades)
+            {
+                if (x is Habilidade habx)
+                {
+                    Console.WriteLine($"{habx.Nome} - {habx.Tier}");
+                }
+                else if (x is Atributos atr)
+                {
+                    //Console.WriteLine(p.atributo.Atk + " PLAYER ");
+                    Console.WriteLine($"ATK: {atr.Atk} MAXHP: {atr.MaxHp} MAXMANA: {atr.MaxMana}");
+                    //p.atributo.Atk += 2;
+                    //Console.WriteLine(atr.Atk);
+                    //Console.WriteLine(p.atributo.Atk + " PLAYER AFTER ");
+                }
+            }
+            return upgrades;
+        }
     }
 }

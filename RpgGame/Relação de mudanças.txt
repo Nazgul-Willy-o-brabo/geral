@@ -1,0 +1,60 @@
+﻿Classes mudadas
+
+Operacoes
+PersonagemJogador
+Mago
+Guerreiro
+Arqueiro
+CriaturaDaNoite
+ItemCombate
+PersonagemMonstro
+ArcoSimples -> Adaga de madeira
+CajadoSimples -> Cajado de madeira
+PocaoCura
+ItemConsumivel
+Bomba
+Program
+
+
+Remover:
+ChuvaDeShuriken
+CorteRapido
+Genki-Dama
+Obliterar
+OverKill
+SocoExplosivo
+SocoForte
+SocoMeleca
+BolaDeFogo
+
+
+INSERIR:
+Custo de mana nas habilidades
+
+
+Skills tier
+0 == Atk basico
+1 = 1.2 a 1.4
+2 = 1.4 a 1.6
+3 = 1.6 a 1.8
+4 = 2.0 a 2.2
+---
+Skill Custo
+0 == 0
+1.2 = 8 a 12
+1.4 = 18 a 26
+1.6 = 30 a 45
+1.8 = 50 a 70
+2.0+ = 70 a 160
+
+
+Mudanças 13/06
+PocaoCura
+Guerreiro
+Habilidade
+Item
+Mago
+PersonagemJogador
+Atributos
+Operacoes
+"Habilidades"

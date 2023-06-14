@@ -3,27 +3,30 @@ using RpgGame.itens;
 
 namespace RpgGame.models
 {
-    public sealed class Mago : PersonagemJogador
+    public sealed class Mago : PersonagemJogador //Classe Alterada
     {
         public Mago(string nome)
         {
             Nome = nome;
+            atributo.MaxMana = 60;
+            atributo.Mana = atributo.MaxMana;
             atributo.Hp = 30;
             atributo.MaxHp = 30;
-            atributo.Atk = 7;
+            atributo.Atk = 6;
             atributo.Xp = 0;
             atributo.Nivel = 1;
-            inventario = new List<Item> { new CajadoMadeira(), new PocaoCura(), new PocaoCura() };
+            inventario = new List<Item> { new CajadoSimples(), new PocaoCura(), new PocaoCura() };
             habilidades = new List<Habilidade> { new AtaqueBasico(), new AtaqueMagico() };
         }
 
         public override void LevelUp()
         {
             atributo.Nivel++;
-            atributo.Hp += 3;
             atributo.MaxHp += 3;
+            atributo.MaxMana += 4;
             atributo.Atk += 3;
             atributo.Hp = atributo.MaxHp;
+            atributo.Mana = atributo.MaxMana;
         }
 
         //Remover \/
