@@ -2,11 +2,18 @@
   "ExpandedNodes": [
     "",
     "\\RpgGame",
+<<<<<<< HEAD
     "\\RpgGame\\habilidades",
     "\\RpgGame\\models",
     "\\RpgGame\\models\\monstros",
     "\\RpgGame\\view"
   ],
   "SelectedNode": "\\RpgGame\\models\\Guerreiro.cs",
+=======
+    "\\RpgGame\\bin",
+    "\\RpgGame\\models"
+  ],
+  "SelectedNode": "\\RpgGame.sln",
+>>>>>>> 6b2523c8e01e50b60f167e3d72b0816a9fc18d85
   "PreviewInSolutionExplorer": false
 }
