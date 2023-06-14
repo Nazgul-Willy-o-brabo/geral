@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eWTdkg4cYuS8eeXD8fJfKLcAJirBqybz/xCWQTM+kxBTgPZj3XcGm5HcNZ7IQuQoJ0DTGD98Mt7tJ+b4FGrL4Q==",
+  "dgSpecHash": "zKi+rSaJQ5Nr6e/QHkbosaZL6ntz6/BIATt9J65lQguk1UtT5xgSlCeiP3zE2jjEoM6eRkim4dmBBB2oMVNhUw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\RpgGame.csproj",
+  "projectFilePath": "C:\\Users\\willy\\OneDrive\\Área de Trabalho\\RPG\\Geral\\RpgGame\\RpgGame.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\willy.costa\\Desktop\\gpr\\Geral\\RpgGame\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

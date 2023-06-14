@@ -11,7 +11,7 @@ namespace RpgGame.habilidades
             Tier = 1;
             ClassType = 2;
             Nivel = 1;
-            Custo =  
+            Custo = 8;
         }
     }
 }

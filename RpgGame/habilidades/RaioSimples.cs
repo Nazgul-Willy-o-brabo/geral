@@ -1,9 +1,4 @@
 ﻿using RpgGame.models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RpgGame.habilidades
 {
@@ -16,6 +11,7 @@ namespace RpgGame.habilidades
             Tier = 2;
             ClassType = 2;
             Nivel = 1;
+            Custo = 22;
         }
     }
 }

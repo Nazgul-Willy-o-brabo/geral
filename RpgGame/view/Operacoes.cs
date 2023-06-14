@@ -339,7 +339,7 @@ namespace RpgGame.view
                     }
                     else
                     {
-                        int index = rnd.Next(listDTier.Count);
+                        int index = rnd.Next(listTTier.Count);
                         if (!jaContem.Contains(index))
                         {
                             h.Add(listTTier[index]);
