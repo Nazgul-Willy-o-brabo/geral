@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\RpgGame",
-    "\\RpgGame\\bin",
-    "\\RpgGame\\models"
+    "\\RpgGame\\habilidades",
+    "\\RpgGame\\models",
+    "\\RpgGame\\models\\monstros",
+    "\\RpgGame\\view"
   ],
-  "SelectedNode": "\\RpgGame.sln",
+  "SelectedNode": "\\RpgGame\\models\\Guerreiro.cs",
   "PreviewInSolutionExplorer": false
 }
