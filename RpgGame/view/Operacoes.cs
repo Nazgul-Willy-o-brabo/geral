@@ -398,7 +398,7 @@ namespace RpgGame.view
             List<Object> upgrades = new List<Object>();
             Atributos atributos = new Atributos();
             Random r = new Random();
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 3; i++)
             {
                 double val = r.NextDouble();
                 if (val > 0.96)
