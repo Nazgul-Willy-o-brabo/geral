@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgGame.models;
 
 namespace RpgGame.itens
 {
-    internal class AdagasDourada
+    internal class AdagasDourada : ItemEquipavel
     {
+        public AdagasDourada()
+        {
+            nome = "Adagas dourada";
+            ItemMult = 1.3;
+            Id = 8;
+            TypeClass = 3;
+        }
     }
 }

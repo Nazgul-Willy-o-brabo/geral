@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgGame.models;
 
 namespace RpgGame.itens
 {
-    internal class AdagaAntigoG
+    internal class AdagaAntigoG : ItemEquipavel
     {
+        public AdagaAntigoG()
+        {
+            nome = "Adagas do antigo Guerreiro";
+            ItemMult = 1.4;
+            Id = 9;
+            TypeClass = 3;
+        }
     }
 }

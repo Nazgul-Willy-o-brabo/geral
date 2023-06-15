@@ -6,9 +6,10 @@ namespace RpgGame.itens
     {
         public AdagaSimples()
         {
-            nome = "Adaga simples";
+            nome = "Adagas simples";
             ItemMult = 1;
             Id = 5;
+            TypeClass = 3;
         }
     }
 }

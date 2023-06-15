@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgGame.models;
 
 namespace RpgGame.itens
 {
-    internal class AdagasAncestrais
+    internal class AdagasAncestrais : ItemEquipavel
     {
+        public AdagasAncestrais()
+        {
+            nome = "Adagas Ancestrais";
+            ItemMult = 1.2;
+            Id = 7;
+            TypeClass = 3;
+        }
     }
 }

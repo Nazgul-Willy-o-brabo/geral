@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgGame.models;
+using RpgGame.Interface;
 
 namespace RpgGame.itens
 {
-    internal class AdagaDaMorte
+    internal class AdagaDaMorte : ItemEquipavel, IMorte
     {
+        public AdagaDaMorte()
+        {
+            nome = "Adagas da morte";
+            ItemMult = 1.4;
+            Id = 11;
+            TypeClass = 3;
+        }
+        public void Death()
+        {
+            
+        }
     }
 }

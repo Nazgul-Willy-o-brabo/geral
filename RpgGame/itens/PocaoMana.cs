@@ -1,5 +1,4 @@
 ﻿using RpgGame.Interface;
-using RpgGame.itens;
 using RpgGame.models;
 
 namespace RpgGame.itens

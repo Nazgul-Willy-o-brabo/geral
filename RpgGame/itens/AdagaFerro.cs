@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RpgGame.models;
 
 namespace RpgGame.itens
 {
-    internal class AdagaFerro
+    internal class AdagaFerro : ItemEquipavel
     {
+        public AdagaFerro()
+        {
+            nome = "Adagas de Ferro";
+            ItemMult = 1.1;
+            Id = 6;
+            TypeClass = 3;
+        }
     }
 }
