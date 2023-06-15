@@ -490,9 +490,11 @@ namespace RpgGame.view
                 }
             }
         }
-        public static void GerarLoot()
+        public static void GerarLoot(int LootNum)
         {
-
+            if(LootNum == 1) { } //Loot de itens equipaveis
+            else if(LootNum == 2) { } //Loot de itens Consumiveis
+            else { } //Loot de itens 
         }
     }
 }
