@@ -30,9 +30,10 @@ namespace RpgGame.models
         public void AprenderHab(Habilidade hab)
         {
             Habilidade habilidadeEncontrada = habilidades.Find(h => h.Nome == hab.Nome);
-            if (habilidades.Contains(hab) && habilidadeEncontrada.Nivel < 4)
+            if (habilidadeEncontrada != null && habilidadeEncontrada.Nivel < 4)
             {
                 habilidadeEncontrada.MultUp(0.2);
+                Console.WriteLine($"Habilidade: {habilidadeEncontrada.Nome} atualizada");
             }
             else if (habilidades.Count < 4)
             {
