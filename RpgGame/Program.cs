@@ -54,7 +54,11 @@ using System.Reflection;
 
 PersonagemJogador player = null;
 Operacoes.CriarPersonagem(ref player);
+Console.WriteLine(player);
+Console.WriteLine();
 Operacoes.Upgrade(player);
+Console.WriteLine();
+Console.WriteLine(player);
 
 
 //for (int i = 0; i < 10; i++)

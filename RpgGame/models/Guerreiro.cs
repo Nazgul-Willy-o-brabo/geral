@@ -17,7 +17,7 @@ namespace RpgGame.models
             atributo.Xp = 0;
             atributo.Nivel = 100;
             inventario = new List<Item> { new EspadaMadeira(), new PocaoCura(), new PocaoCura() };
-            habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido() };
+            habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido(), new GolpeBasico() };
         }
         public override void LevelUp()
         {
@@ -34,8 +34,19 @@ namespace RpgGame.models
         {
             string inventStr = string.Join(", ", inventario.Select(item => item.nome));
             string HabStr = string.Join(", ", habilidades.Select(Hab => Hab.Nome));
+            string Mult = string.Join(", ", habilidades.Select(Hab => Hab.Multiplicador));
 
-            return $"Guerreiro de nome {Nome}\nHP atual: {atributo.Hp}\nATK Atual {atributo.Atk}\nXp: {atributo.Xp}\nNivel: {atributo.Nivel}\nInventario: {inventStr}\nHabilidades: {HabStr}";
+            return $"Guerreiro de nome {Nome}\n" +
+                $"HP atual: {atributo.Hp}\n" +
+                $"HP Total: {atributo.MaxHp}\n" +
+                $"Mana atual: {atributo.Mana}\n" +
+                $"Mana Total: {atributo.MaxMana}\n" +
+                $"ATK Atual {atributo.Atk}\n" +
+                $"Xp: {atributo.Xp}\n" +
+                $"Nivel: {atributo.Nivel}\n" +
+                $"Inventario: {inventStr}\n" +
+                $"Habilidades: {HabStr}\n" +
+                $"Multiplicador: {Mult}";
         }
     }
 }

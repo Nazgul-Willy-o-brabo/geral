@@ -4,6 +4,7 @@ using RpgGame.models;
 using System.Reflection;
 using System.Linq;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace RpgGame.view
 {
@@ -391,13 +392,13 @@ namespace RpgGame.view
             }
             return playerHab;
         }
-        public static List<Object> Upgrade(PersonagemJogador p)
+        public static void Upgrade(PersonagemJogador p)
         {
             List<Habilidade> hab = CarregarPSkills(p);
             List<Object> upgrades = new List<Object>();
-            Atributos at = new Atributos();
+            Atributos atributos = new Atributos();
             Random r = new Random();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 30; i++)
             {
                 double val = r.NextDouble();
                 if (val > 0.96)
@@ -440,6 +441,11 @@ namespace RpgGame.view
                     upgrades.Add(listAdd);
                 }
             }
+            AtribuirUpgrade(p,upgrades);
+        }
+        public static void AtribuirUpgrade(PersonagemJogador p, List<Object> upgrades)
+        {
+            Console.WriteLine("Selecione um upgrade para atribuir: ");
             foreach (Object x in upgrades)
             {
                 if (x is Habilidade habx)
@@ -448,14 +454,42 @@ namespace RpgGame.view
                 }
                 else if (x is Atributos atr)
                 {
-                    //Console.WriteLine(p.atributo.Atk + " PLAYER ");
-                    Console.WriteLine($"ATK: {atr.Atk} MAXHP: {atr.MaxHp} MAXMANA: {atr.MaxMana}");
-                    //p.atributo.Atk += 2;
-                    //Console.WriteLine(atr.Atk);
-                    //Console.WriteLine(p.atributo.Atk + " PLAYER AFTER ");
+                    if (atr.Atk != 0)
+                    {
+                        Console.WriteLine("Atributo: Atk +2");
+                    }
+                    else if (atr.MaxMana != 0)
+                    {
+                        Console.WriteLine("Atributo: Mana +3");
+                    }
+                    else if (atr.MaxHp != 0)
+                    {
+                        Console.WriteLine("Atributo: Hp +3");
+                    }
                 }
             }
-            return upgrades;
+            int select = int.Parse(Console.ReadLine());
+            var UpSelecionado = upgrades[select]; //0, 1, 2
+            if(UpSelecionado is Habilidade)
+            {
+                p.AprenderHab((Habilidade)UpSelecionado);
+            }
+            else if(UpSelecionado is Atributos atr)
+            {
+                if (atr.Atk != 0)
+                {
+                    p.atributo.Atk += 2;
+                }
+                else if (atr.MaxMana != 0)
+                {
+                    p.atributo.MaxMana += 3;
+                }
+                else if (atr.MaxHp != 0)
+                {
+                    p.atributo.MaxHp += 4;
+                }
+            }
         }
+
     }
 }
