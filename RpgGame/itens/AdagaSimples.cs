@@ -8,6 +8,7 @@ namespace RpgGame.itens
         {
             nome = "Adaga simples";
             ItemMult = 1;
+            Id = 5;
         }
     }
 }

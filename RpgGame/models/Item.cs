@@ -4,5 +4,6 @@
     {
         public string nome { get; protected set; }
         public string? desc { get; protected set; }
+        public int Id { get; protected set; }
     }
 }

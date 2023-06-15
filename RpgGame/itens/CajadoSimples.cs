@@ -8,6 +8,7 @@ namespace RpgGame.itens
         {
             nome = "Cajado Simples";
             ItemMult = 1;
+            Id = 4;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace RpgGame.models
             atributo.Xp = 0;
             atributo.Nivel = 100;
             inventario = new List<Item> { new EspadaMadeira(), new PocaoCura(), new PocaoCura() };
-            habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido(), new GolpeBasico() };
+            habilidades = new List<Habilidade> { new AtaqueBasico(), new CorteRapido() };
         }
         public override void LevelUp()
         {

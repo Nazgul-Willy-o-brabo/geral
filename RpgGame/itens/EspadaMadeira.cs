@@ -8,6 +8,7 @@ namespace RpgGame.itens
         {
             nome = "Espada de madeira";
             ItemMult = 1;
+            Id = 3;
         }
     }
 }

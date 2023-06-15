@@ -490,6 +490,9 @@ namespace RpgGame.view
                 }
             }
         }
+        public static void GerarLoot()
+        {
 
+        }
     }
 }

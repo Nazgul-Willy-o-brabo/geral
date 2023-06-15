@@ -9,6 +9,7 @@ namespace RpgGame.itens
         {
             nome = "Poção de cura";
             desc = "restaura o HP em 25%";
+            Id = 1;
         }
         public override void Usar(IStatus status)
         {
