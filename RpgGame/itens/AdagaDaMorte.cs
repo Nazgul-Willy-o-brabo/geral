@@ -8,13 +8,13 @@ namespace RpgGame.itens
         public AdagaDaMorte()
         {
             nome = "Adagas da morte";
-            ItemMult = 1.4;
+            ItemMult = 1.8;
             Id = 11;
             TypeClass = 3;
         }
         public void Death()
         {
-            
+            //Logica para quando inimigo estiver com -10% tomar execução
         }
     }
 }
