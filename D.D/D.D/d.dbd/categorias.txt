@@ -1,0 +1,171 @@
+Id: 1
+Nome: xxxxxxxxxxxxxxx
+Lore: 200
+Passiva: comeCu
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 2
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 3
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 4
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 5
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 6
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 7
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 8
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 9
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 10
+Nome: teste
+Lore: LOREM20
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 11
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 12
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 13
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 14
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 15
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 16
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----
+Id: 17
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+Adicional: efeito toop
+-----
+Id: 18
+Nome: teste
+Lore: desc
+Passiva: efeito
+Lider +1: lider01
+Lider +2: lider02
+Lider +3: lider03
+Lider +4: lider04
+-----

@@ -4,7 +4,7 @@
     {
         public static void Menu()
         {
-            string pathMag = @"C:\Users\willy\OneDrive\Área de Trabalho\d.dbd\cartasMag.txt";
+            string pathMag = @"C:\Users\willy\OneDrive\Área de Trabalho\proj.D.Dconsole\D.D\D.D\d.dbd\cartasMag.txt";
             string pathCat = @"C:\Users\willy\Desktop\d.dbd\categorias.txt";
             int LastId = 0;
             char op;

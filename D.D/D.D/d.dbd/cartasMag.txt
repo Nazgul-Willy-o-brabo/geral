@@ -1,0 +1,89 @@
+Id: 1
+Nome: bbbbbbbbbbbb
+Descrição: Penis
+Tipo: Mágica
+Efeito: Come seu cu
+Modelo: : Mística
+-----
+Id: 2
+Nome: d
+Descrição: descrição
+Tipo: Mágica
+Efeito: Come seu cu
+Modelo: Equipamento
+-----
+Id: 3
+Nome: carta 
+Descrição: descrição
+Tipo: Mágica
+Efeito: Come seu cu
+Modelo: : Mística
+-----
+Id: 4
+Nome: nomeee 
+Descrição: desc
+Tipo: Mágica
+Efeito: eff
+Modelo: Campo
+Beneficios: Abencoado, Agua, Anjo
+Maleficios: Agua, Anjo, Artificial
+Ef.Bonus: +10% atk
+Ef.Maleficio: -10% atk
+-----
+Id: 5
+Nome: carta 
+Descrição: descrição
+Tipo: Mágica
+Efeito: Come seu cu
+Modelo: : Mística
+-----
+Id: 6
+Nome: carta 
+Descrição: descrição
+Tipo: Mágica
+Efeito: Come seu cu
+Modelo: : Mística
+-----
+Id: 7
+Nome: carta 
+Descrição: descrição
+Tipo: Mágica
+Efeito: Come seu cu
+Modelo: : Armadilha
+-----
+Id: 8
+Nome: nomeee 
+Descrição: desc
+Tipo: Mágica
+Efeito: eff
+Modelo: Campo
+Beneficios: Vilao, Anjo, Parasita, Faminto
+Maleficios: Luz, Corrompido, Vilao
+Ef.Bonus: +10% atk
+Ef.Maleficio: -10% atk
+-----
+Id: 9
+Nome: carta 
+Descrição: descrição
+Tipo: Magica
+Efeito: Come seu cu
+Modelo: Equipamento
+-----
+Id: 10
+Nome: nomeee 
+Descrição: desc
+Tipo: Mágica
+Efeito: eff
+Modelo: Campo
+Beneficios: Agua, Artificial, Assassino, Automata
+Maleficios: Vilao, Feiticeiro, Anjo
+Ef.Bonus: +10% atk
+Ef.Maleficio: -10% atk
+-----
+Id: 11
+Nome: SuperOlhos
+Descrição: descrição
+Tipo: Magica
+Efeito: Come seu cu
+Modelo: : Mística
+-----
