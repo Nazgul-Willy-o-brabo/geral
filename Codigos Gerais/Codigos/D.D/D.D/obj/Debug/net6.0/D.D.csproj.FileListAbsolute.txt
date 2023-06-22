@@ -13,3 +13,18 @@ C:\Users\willy\source\repos\D.D\D.D\obj\Debug\net6.0\refint\D.D.dll
 C:\Users\willy\source\repos\D.D\D.D\obj\Debug\net6.0\D.D.pdb
 C:\Users\willy\source\repos\D.D\D.D\obj\Debug\net6.0\D.D.genruntimeconfig.cache
 C:\Users\willy\source\repos\D.D\D.D\obj\Debug\net6.0\ref\D.D.dll
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.csproj.AssemblyReference.cache
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.AssemblyInfoInputs.cache
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.AssemblyInfo.cs
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.csproj.CoreCompileInputs.cache
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.dll
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\refint\D.D.dll
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.pdb
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\bin\Debug\net6.0\D.D.exe
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\bin\Debug\net6.0\D.D.deps.json
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\bin\Debug\net6.0\D.D.runtimeconfig.json
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\bin\Debug\net6.0\D.D.dll
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\bin\Debug\net6.0\D.D.pdb
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\D.D.genruntimeconfig.cache
+C:\Users\willy\source\repos\Willy-Campos-Costa\Geral\Codigos Gerais\Codigos\D.D\D.D\obj\Debug\net6.0\ref\D.D.dll

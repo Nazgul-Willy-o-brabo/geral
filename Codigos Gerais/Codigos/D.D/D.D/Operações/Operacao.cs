@@ -288,8 +288,8 @@ namespace D.D.Operações
             Console.ReadKey();
         }
 
-        public static void CreateCat(string path, int lastId) {
-            Operacao.VerificaID(path,lastId);
-        }
+        //public static void CreateCat(string path, int lastId) {
+        //    Operacao.VerificaID(path,lastId);
+        //}
     }
 }

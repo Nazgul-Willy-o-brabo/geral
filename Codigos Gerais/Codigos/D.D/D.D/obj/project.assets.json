@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willy\\source\\repos\\D.D\\D.D\\D.D.csproj",
+      "projectUniqueName": "C:\\Users\\willy\\source\\repos\\Willy-Campos-Costa\\Geral\\Codigos Gerais\\Codigos\\D.D\\D.D\\D.D.csproj",
       "projectName": "D.D",
-      "projectPath": "C:\\Users\\willy\\source\\repos\\D.D\\D.D\\D.D.csproj",
+      "projectPath": "C:\\Users\\willy\\source\\repos\\Willy-Campos-Costa\\Geral\\Codigos Gerais\\Codigos\\D.D\\D.D\\D.D.csproj",
       "packagesPath": "C:\\Users\\willy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willy\\source\\repos\\D.D\\D.D\\obj\\",
+      "outputPath": "C:\\Users\\willy\\source\\repos\\Willy-Campos-Costa\\Geral\\Codigos Gerais\\Codigos\\D.D\\D.D\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\willy\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

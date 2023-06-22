@@ -4,7 +4,7 @@
     {
         public static void Menu()
         {
-            string path = @"C:\Users\willy\Desktop\d.dbd\cartas.txt";
+            string pathMag = @"C:\Users\willy\OneDrive\Área de Trabalho\d.dbd\cartasMag.txt";
             string pathCat = @"C:\Users\willy\Desktop\d.dbd\categorias.txt";
             int LastId = 0;
             char op;
@@ -27,20 +27,20 @@
                 Console.WriteLine("S: Sair");
                 Console.ForegroundColor = ConsoleColor.White;
                 op = Console.ReadKey().KeyChar;
-                if (op == '1') { Console.Clear(); MenuCriar(path, ref LastId); }
-                else if (op == '2') { Console.Clear(); Operacao.viewPerNameOrId(path); }
-                else if (op == '3') { Console.Clear(); Operacao.viewAll(path); }
+                if (op == '1') { Console.Clear(); MenuCriar(pathMag, ref LastId); }
+                else if (op == '2') { Console.Clear(); Operacao.viewPerNameOrId(pathMag); }
+                else if (op == '3') { Console.Clear(); Operacao.viewAll(pathMag); }
                 else if (op == '5') { Console.Clear(); Operacao.viewAtributes(); }
-                else if (op == '8') { Console.Clear(); Operacao.CreateCat(pathCat,LastId); }
-                else if (op == '9') { Console.Clear(); Operacao.Modificar(path); }
+                //else if (op == '8') { Console.Clear(); Operacao.CreateCat(pathCat,LastId); }
+                else if (op == '9') { Console.Clear(); Operacao.Modificar(pathMag); }
                 //else if(op == 'b' || op == 'B') { sdfs}
             } while (op != 'S' && op != 's');
 
         }
 
-        public static void MenuCriar(string path, ref int LastId)
+        public static void MenuCriar(string pathMag, ref int LastId)
         {
-            Operacao.VerificaID(path, ref LastId);
+            Operacao.VerificaID(pathMag, ref LastId);
             Console.WriteLine("----Criador de cartas----\n\n");
             Console.WriteLine("\nSelecione o modelo de criação de carta\n");
             Console.WriteLine("1: Monstro");
@@ -52,10 +52,10 @@
             Console.WriteLine("Visualizar modelos Supremos");
             Console.ForegroundColor = ConsoleColor.White;
             char op = Console.ReadKey().KeyChar;
-            if (op == '2') { Console.Clear(); CriarCarta.CMistica(path, ref LastId); }
-            else if (op == '3') { Console.Clear(); CriarCarta.CEquipamento(path, ref LastId); }
-            else if (op == '4') { Console.Clear(); CriarCarta.CArmadilha(path, ref LastId); }
-            else if (op == '5') { Console.Clear(); CriarCarta.CCampo(path, ref LastId); }
+            if (op == '2') { Console.Clear(); CriarCarta.CMistica(pathMag, ref LastId); }
+            else if (op == '3') { Console.Clear(); CriarCarta.CEquipamento(pathMag, ref LastId); }
+            else if (op == '4') { Console.Clear(); CriarCarta.CArmadilha(pathMag, ref LastId); }
+            else if (op == '5') { Console.Clear(); CriarCarta.CCampo(pathMag, ref LastId); }
 
         }
 
